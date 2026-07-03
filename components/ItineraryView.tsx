@@ -59,7 +59,7 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
   const logisticsEntries = logisticsData.filter((l) => logisticaBlockIds.includes(l.blockId));
 
   const rioAgora = rioAgoraData;
-  const rioItems = lang === "en" ? rioAgora.en : rioAgora.pt;
+  const rioItems = lang === "en" ? rioAgora.en : lang === "es" ? rioAgora.es : rioAgora.pt;
 
   return (
     <div className="min-h-screen pb-20" style={{ background: "var(--color-sand)" }}>
@@ -155,6 +155,9 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
                     {block.content && (
                       <p className="mt-1.5 text-sm text-gray-600 leading-relaxed">{block.content}</p>
                     )}
+                    {block.extras && (
+                      <p className="mt-1.5 text-xs text-gray-500 leading-relaxed whitespace-pre-line">{block.extras}</p>
+                    )}
                     {flags.map((flag, fi) => (
                       <FlagBadge key={fi} flag={flag} lang={lang} />
                     ))}
@@ -216,7 +219,7 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
             {safetyEntries.map((s) => (
               <div key={s.zona}>
                 <p className="font-semibold text-sm" style={{ color: "var(--color-night)" }}>{s.zona}</p>
-                <p className="text-sm text-gray-600 mt-0.5">{lang === "en" ? s.en : s.pt}</p>
+                <p className="text-sm text-gray-600 mt-0.5">{lang === "en" ? s.en : lang === "es" ? s.es : s.pt}</p>
                 {s.nightNote && (
                   <p className="text-sm mt-1 text-gray-500 italic">
                     {t(lang, "layer_night_note")} {s.nightNote}
@@ -225,7 +228,9 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
               </div>
             ))}
             {safetyEntries.length === 0 && (
-              <p className="text-sm text-gray-500">{lang === "pt" ? "Nenhuma zona específica identificada." : "No specific zones identified."}</p>
+              <p className="text-sm text-gray-500">
+                {lang === "pt" ? "Nenhuma zona específica identificada." : lang === "es" ? "Ninguna zona específica identificada." : "No specific zones identified."}
+              </p>
             )}
           </div>
         </CollapsibleLayer>
@@ -241,7 +246,7 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
             <div className="space-y-3">
               {logisticsEntries.map((l) => (
                 <div key={l.blockId} className="flex items-center justify-between gap-3">
-                  <p className="text-sm text-gray-700">{lang === "en" ? l.label.en : l.label.pt}</p>
+                  <p className="text-sm text-gray-700">{lang === "en" ? l.label.en : lang === "es" ? l.label.es : l.label.pt}</p>
                   <a
                     href={l.url}
                     target="_blank"
@@ -249,7 +254,7 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
                     className="shrink-0 text-xs font-medium px-3 py-1.5 rounded-full text-white transition-opacity hover:opacity-80"
                     style={{ background: "var(--color-ocean)" }}
                   >
-                    {lang === "pt" ? "Reservar →" : "Book →"}
+                    {lang === "pt" ? "Reservar →" : lang === "es" ? "Reservar →" : "Book →"}
                   </a>
                 </div>
               ))}

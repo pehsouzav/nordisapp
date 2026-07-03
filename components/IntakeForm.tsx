@@ -118,15 +118,15 @@ export default function IntakeForm({ lang, onLangChange, onSubmit }: Props) {
               </div>
               <div className="rounded-3xl p-6 space-y-4" style={{ background: "white" }}>
                 <p className="text-sm font-medium text-gray-500">{t(lang, "language_prompt")}</p>
-                <div className="grid grid-cols-2 gap-3">
-                  {(["pt", "en"] as Lang[]).map((l) => (
+                <div className="grid grid-cols-3 gap-3">
+                  {([["pt", "🇧🇷 Português"], ["en", "🇺🇸 English"], ["es", "🇦🇷 Español"]] as [Lang, string][]).map(([l, label]) => (
                     <button
                       key={l}
                       onClick={() => onLangChange(l)}
                       className={`${btnBase} text-center ${lang === l ? btnSelected : btnUnselected}`}
                       style={lang === l ? { background: "var(--color-ocean)", borderColor: "var(--color-ocean)" } : {}}
                     >
-                      {l === "pt" ? "🇧🇷 Português" : "🇺🇸 English"}
+                      {label}
                     </button>
                   ))}
                 </div>
@@ -136,7 +136,7 @@ export default function IntakeForm({ lang, onLangChange, onSubmit }: Props) {
                 className="w-full rounded-2xl py-4 px-6 text-lg font-bold text-white transition-transform hover:scale-[1.02] active:scale-95"
                 style={{ background: "var(--color-sunset)" }}
               >
-                {lang === "pt" ? "Começar →" : "Start →"}
+                {lang === "pt" ? "Começar →" : lang === "es" ? "Empezar →" : "Start →"}
               </button>
             </div>
           )}

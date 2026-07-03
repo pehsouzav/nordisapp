@@ -3,42 +3,49 @@
     "zona": "Zona Sul",
     "pt": "Ipanema, Copacabana e Leblon são as áreas mais turísticas e bem policiadas. De dia: tranquilo para caminhar com celular à vista. À noite: prefira Uber ao invés de andar muito a pé após a meia-noite.",
     "en": "Ipanema, Copacabana and Leblon are the most tourist-friendly, well-policed areas. Daytime: fine to walk with your phone out. Nighttime: prefer Uber over walking late at night.",
+    "es": "Ipanema, Copacabana y Leblon son las zonas más turísticas y con mejor vigilancia policial. De día: tranquilo para caminar con el celular a la vista. De noche: prefiere Uber antes de caminar mucho después de medianoche.",
     "nightNote": "Evite exibir celular caro nas calçadas depois das 23h. Use Uber para voltar após baladas."
   },
   {
     "zona": "Centro/Porto",
     "pt": "Ótimo de dia (segunda a sexta, horário comercial) — cheio de gente e movimento. Esvazie no fim de semana e após as 19h. Evite ruas desertas no Centro velho à noite.",
     "en": "Great during the day (Mon–Fri, business hours) — lively and busy. Gets quiet on weekends and after 7 pm. Avoid empty streets in the old Centro at night.",
+    "es": "Excelente de día (lunes a viernes, horario comercial) — lleno de gente y movimiento. Se vacía los fines de semana y después de las 19h. Evita las calles desiertas en el Centro histórico de noche.",
     "nightNote": "Porto/Boulevard Olímpico pode ser frequentado à noite em eventos, mas cheque se há evento antes de ir."
   },
   {
     "zona": "Santa Teresa/Lapa",
     "pt": "Santa Teresa: agradável de dia, turístico e boêmio. Lapa à noite: divertida mas peça cuidado com os pertences — é uma área de festa com muito fluxo de turistas.",
     "en": "Santa Teresa: pleasant by day, artsy and bohemian. Lapa at night: fun but watch your belongings — it's a busy nightlife strip with lots of tourists.",
+    "es": "Santa Teresa: agradable de día, artístico y bohemio. Lapa de noche: divertida pero cuida tus pertenencias — es una zona de fiesta con mucho flujo de turistas.",
     "nightNote": "Na Lapa, guarde o celular no bolso ou numa pochete virada pra frente. Prefira Uber na volta."
   },
   {
     "zona": "Tijuca",
     "pt": "O acesso ao Cristo pelo Trem do Corcovado e por van oficial é seguro. Evite o trajeto a pé pela floresta sem guia. O bairro Tijuca em si é residencial e tranquilo.",
     "en": "Access to Cristo via the Corcovado Train and official vans is safe. Avoid walking through the forest without a guide. The Tijuca neighborhood itself is residential and calm.",
+    "es": "El acceso al Cristo por el Tren del Corcovado y furgonetas oficiales es seguro. Evita caminar por el bosque sin guía. El barrio Tijuca en sí es residencial y tranquilo.",
     "nightNote": "Evite a floresta após as 17h — fica escuro rápido."
   },
   {
     "zona": "Zona Oeste",
     "pt": "Praias da Zona Oeste (Prainha, Grumari) são tranquilas e remotas. Sempre vá de carro ou Uber, nunca a pé. Não fique até tarde — a região esvazia completamente à noite.",
     "en": "Zona Oeste beaches (Prainha, Grumari) are peaceful and remote. Always go by car or Uber — never on foot. Don't stay late; the area empties completely at night.",
+    "es": "Las playas de la Zona Oeste (Prainha, Grumari) son tranquilas y remotas. Ve siempre en coche o Uber — nunca a pie. No te quedes hasta tarde; la zona queda completamente vacía de noche.",
     "nightNote": "Região sem vida noturna — planeje a volta antes de escurecer."
   },
   {
     "zona": "Fora do Rio",
     "pt": "Búzios, Petrópolis e Ilha Grande têm perfil turístico desenvolvido. Use transportes regulares ou tours organizados. Fique atento aos horários de última balsa (Ilha Grande).",
     "en": "Búzios, Petrópolis and Ilha Grande are well-developed tourist destinations. Use regular transport or organized tours. Watch the last ferry schedule for Ilha Grande.",
+    "es": "Búzios, Petrópolis e Ilha Grande son destinos turísticos bien desarrollados. Usa transporte regular o tours organizados. Presta atención al horario del último ferry (Ilha Grande).",
     "nightNote": "Verifique o horário da última balsa ou ônibus de volta ao continente."
   },
   {
     "zona": "Varia",
     "pt": "Regra geral: de dia, a cidade é muito mais segura do que a reputação sugere. À noite, prefira Uber, guarde o celular e evite ruas desertas.",
     "en": "General rule: daytime Rio is much safer than its reputation suggests. At night, use Uber, put your phone away, and avoid empty streets.",
+    "es": "Regla general: de día, Río es mucho más segura de lo que su reputación sugiere. De noche, usa Uber, guarda el celular y evita calles desiertas.",
     "nightNote": "Use Uber. Sem corridas pop/mais barato — o barato pode sair caro."
   }
 ]

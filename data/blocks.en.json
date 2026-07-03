@@ -1,24 +1,23 @@
 [
   {
     "id": "PR1",
-    "title": "Copacabana + Forte + pôr do sol no Arpoador",
+    "title": "Copacabana + Fort + Arpoador Sunset",
     "vibePrimary": "praia",
-    "vibeSecondary": null,
+    "vibeSecondary": "cultura",
     "zona": "Zona Sul",
     "periodo": "tarde",
     "essentialFirstTime": true,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "Pule o miolo turístico de Copa (Posto 3–4, vendedor a cada 2 min) e comece no Posto 6, do lado do Forte: areia mais calma e de carioca. No fim da tarde, entre no Forte e vá direto à mureta — a vista da curva da praia dali é a melhor foto, sem multidão. Depois caminhe até o Arpoador e suba na pedra ~40 min antes do pôr do sol pra pegar lugar; quando o sol some atrás dos Dois Irmãos, todo mundo bate palma. Leve uma canga e uma latinha. Feche nos bares da Francisco Otaviano.",
-    "trap": "O Forte fecha às 19h e NÃO abre segunda — o plano de pôr do sol só rola ter–dom (no inverno escurece ~17h30, última entrada 18h). O Arpoador virou 'parque' controlado, aberto 4h–21h. Na areia o barraqueiro cobra o que quer: o mesmo guarda-sol é R$25 numa barraca e R$50 na do lado — combine o preço ANTES de sentar. Na hora do 'rush' do sol a pedra lota: celular guardado, nada de pertence caro à mostra.",
-    "fairPrice": "Água de coco R$8–13 (barraca turística cobra R$15+; pergunte antes). Caipirinha de quiosque ~R$20 (dá pra achar a R$13 procurando). Forte: R$6 (meia R$3), grátis às terças. Cadeira + guarda-sol ~R$25–40 o conjunto, sempre combinado antes."
+    "fit": ["all"],
+    "content": "Copacabana boardwalk → breakfast with a view at Copacabana Fort → Ipanema Beach with a late afternoon finish at Arpoador",
+    "trap": "Copacabana Fort is usually closed on Mondays and hours can change on holidays or military events. Don't arrive too late — there may be queues at the entrance and at the Confeitaria Colombo/Café 18 inside the Fort. For the Arpoador sunset, arrive at least 40–60 min early as it gets very crowded, especially on weekends and peak season. Avoid walking with your phone very exposed on the boardwalk and in the crowded Arpoador area.",
+    "fairPrice": "Copacabana Fort: R$10 (full price) / free on Tuesdays\nCopacabana Beach: free.\nArpoador: free.\nBeach chair: usually R$10–R$20.\nUmbrella: usually R$20–R$40.",
+    "extras": ""
   },
   {
     "id": "PR2",
-    "title": "Ipanema & Leblon por \"tribo de posto\"",
+    "title": "Ipanema & Leblon by \"beach tribe\"",
     "vibePrimary": "praia",
     "vibeSecondary": null,
     "zona": "Zona Sul",
@@ -26,16 +25,15 @@
     "essentialFirstTime": false,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "Cada trecho tem sua tribo. Posto 9 (altura da Vinícius/Joana Angélica) = jovem, descolado, esportivo. Rua Farme de Amoedo / Posto 8 = point LGBTQ+, bandeira do arco-íris. Posto 11–12, em frente ao Leblon = famílias, 'baixo Leblon'. Entre o 10 e o canal rola vôlei e futevôlei. Programa de local: alugar cadeira, mate gelado com biscoito Globo do ambulante e ficar a manhã toda. Depois, almoço na Dias Ferreira (Leblon) ou um açaí.",
-    "trap": "É tranquilo de dia, mas atenção ao golpe do 'segura minha bolsa' e a celular largado na canga enquanto você entra no mar — peça pro barraqueiro guardar. O mar de Ipanema tem valas e corrente forte: respeite a bandeira vermelha do salva-vidas. Com ambulante, confirme o preço do mate/Globo: turista às vezes paga o dobro do que o anunciado.",
-    "fairPrice": "Mate ~R$5–7 o copo, biscoito Globo ~R$5 o saco. Cadeira ~R$10–15 cada, guarda-sol ~R$20–30. Açaí 300 ml ~R$18–28 conforme a casa."
+    "fit": ["all"],
+    "content": "Ipanema Beach (Ipanema) and Leblon Beach (Leblon)",
+    "trap": "Don't treat Ipanema and Leblon as one beach — each stretch has a very different crowd. Avoid picking a spot just because it's famous; it may not match what you're looking for. Posto 9 is the most well-known, but it can also be packed, expensive, and full of street vendors. Near Arpoador/early Ipanema, it gets very crowded late afternoon. In Leblon, the vibe is more family/upscale, but kiosk and restaurant prices tend to be higher.",
+    "fairPrice": "Chair: R$10–R$25.\nUmbrella: R$20–R$40.\nMate/lemonade/vendor drinks: usually R$8–R$15.\nCoconut water: R$8–R$15.\nCaipirinha/drinks on sand or kiosk: usually R$20–R$40.\nAvoid paying much more than that without asking the price first.",
+    "extras": "Want action and the classic scene? Posto 9.\nWant diversity and LGBTQIA+ vibe? Posto 8.\nWant sunset/surf/photos? Arpoador/Posto 7.\nWant something calmer and more premium? Leblon Postos 11 and 12."
   },
   {
     "id": "PR3",
-    "title": "Praias selvagens: Joá / Prainha / Grumari",
+    "title": "Wild beaches: Joá / Prainha / Grumari",
     "vibePrimary": "praia",
     "vibeSecondary": null,
     "zona": "Zona Oeste",
@@ -43,16 +41,15 @@
     "essentialFirstTime": false,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "Fuja da Zona Sul rumo à Zona Oeste. A Prainha é praia de surfista, cercada de mata preservada (APA), sem prédio — a melhor onda e o melhor verde. Grumari é quase deserta, areia avermelhada, sem quiosque comercial. Joatinga (Joá) é uma praia escondida que some na maré alta. Programa: ir cedo de carro/Uber, levar a própria comida e água, passar o dia. Volte pelo mirante do Joá no fim da tarde.",
-    "trap": "SÓ de carro/Uber/táxi — transporte público é ruim e a Estrada do Joá é perigosa a pé. Joatinga só na maré BAIXA: cheque a tábua de marés ou você chega e a praia sumiu. Estrutura mínima: leve água, comida e dinheiro. A região esvazia à noite — não fique até tarde. Domingo e feriado a Grumari/Prainha lotam e o trânsito na volta trava.",
-    "fairPrice": "Sem barraca turística cara — leve cooler. Uber da ZS até a Prainha ~R$60–90 por trecho (é longe). De carro, abasteça antes. Coco com ambulante na Prainha ~R$8–10."
+    "fit": ["all"],
+    "content": "Joatinga Beach – Rua Lasar Segal, Joá (Prainha and Grumari not on the main itinerary)",
+    "trap": "This route is not good to do without a car or without planning. Joá/Joatinga has access through a gated condo, limited parking, and stairs down to the beach. At high tide, the sandy strip can almost disappear. Prainha and Grumari have controlled access during Operação Verão (Summer Operation): when the parking lot is full, car entry can be blocked. In peak season, on weekends and holidays, you need to arrive early. The sea can be rough at all three, especially Prainha, which is popular with surfers. Cell signal may be poor at Grumari. Don't rely on Uber to get back from Grumari/Prainha at the end of the day.",
+    "fairPrice": "",
+    "extras": "Best done in this order: Joatinga/Joá early + Prainha + Grumari. For those who want the most beautiful and \"secret\" beach, Joatinga is great but depends a lot on the tide. For surfing and classic scenery, Prainha is the best. For nature, peace, and a longer beach, Grumari is the most complete. On busy days, choose just Prainha + Grumari to avoid wasting time on travel."
   },
   {
     "id": "PR4",
-    "title": "Lagoa + Parque Lage, modo lento",
+    "title": "Lagoa + Parque Lage, slow mode",
     "vibePrimary": "praia",
     "vibeSecondary": "natureza",
     "zona": "Zona Sul",
@@ -60,16 +57,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "kids_ok"
-    ],
-    "content": "A Lagoa Rodrigo de Freitas é o programa de carioca em modo relax. Alugue bike na orla e dê a volta nos ~7,5 km, parando num quiosque; ou pedalinho de cisne pras crianças. Depois atravesse pro Parque Lage (pé do Corcovado): jardim inglês, grutas, o palacete com o pátio e a piscina (cenário de clipe) e o Cristo emoldurado lá no alto. Café da manhã no Plage Café, dentro do palacete. Tudo grátis e sombreado.",
-    "trap": "Parque Lage é grátis, mas pra entrar no palacete e fazer a foto da piscina agora é preciso AGENDAR online (gratuito) — sem agendamento, fila ou recusa. Parque fecha às 17h. Quiosques da Lagoa variam muito de preço; os do Parque dos Patins são os mais movimentados. No fim da tarde, mosquito perto da água.",
-    "fairPrice": "Parque Lage e Lagoa: grátis. Bike diária ~R$15–20; pedalinho ~R$40–60 a meia hora. Quiosque: chope ~R$12–16, coco ~R$10–12, porção ~R$40–60. Brunch no Plage Café ~R$50–90 por pessoa."
+    "fit": ["kids_ok"],
+    "content": "Bike ride/walk around Lagoa Rodrigo de Freitas (bike path, pedal boats) + Parque Lage (combine with Botanical Garden on the same day; best in the morning or early afternoon)",
+    "trap": "Don't try to walk the full loop around the Lagoa if you're short on time or energy — it's about 7.5 km and can be tiring in the heat. The bike path is very crowded on weekends, especially in the morning. Pedal boats can have a queue and aren't great in very strong sun or wind. Parque Lage is free, but the line for photos at the mansion/café can be long. The café is first-come first-served, so don't count on a \"quick breakfast\" on Saturdays, Sundays, or holidays. Only combine with the Botanical Garden if you start early — otherwise it gets rushed.",
+    "fairPrice": "Lagoa Rodrigo de Freitas: free.\nWalking/bike path: free.\nBike Itaú/Bike Rio: cheap option from around R$3 for a short trip, with extra charges for additional time.\nLocally rented bike: typically R$15–R$30 per hour depending on the type.\nPedal boat on the Lagoa: typically R$30–R$50 depending on model/size.",
+    "extras": "Best done in the morning or early afternoon. For a light itinerary: walk part of the Lagoa, stop at Parque dos Patins or near the Pier, then head to Parque Lage. You don't need to do the full loop for it to be worth it. Parque Lage is great for photos, nature, and a view of Cristo, but the experience varies a lot with how crowded it is. To combine with the Botanical Garden: Parque Lage early + Botanical Garden + Lagoa late afternoon. For a slower, unhurried itinerary, just do Lagoa + Parque Lage and save the Botanical Garden for another day."
   },
   {
     "id": "CH1",
-    "title": "Centro histórico a pé (Colombo, Cinelândia, Candelária, Real Gabinete)",
+    "title": "Historic Downtown on foot (Colombo, Cinelândia, Candelária, Real Gabinete)",
     "vibePrimary": "cultura",
     "vibeSecondary": null,
     "zona": "Centro/Porto",
@@ -77,16 +73,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "Roteiro a pé de manhã num dia de semana, quando o Centro está vivo. Comece na Confeitaria Colombo (1894, vitral art nouveau) com um café e pastel de nata no balcão, antes de lotar. Siga pra Cinelândia (Theatro Municipal, Biblioteca Nacional), passe na Igreja da Candelária e chegue ao ponto alto: o Real Gabinete Português de Leitura, uma das bibliotecas mais bonitas do mundo, de graça. Feche no Arco do Teles / Travessa do Comércio (becos do século XVIII) com um chope.",
-    "trap": "Quase tudo fecha ou esvazia no fim de semana: o Real Gabinete só abre SEG–SEX 10h–17h (fechado sáb/dom e feriado), e o Centro vira deserto arriscado no domingo. Faça num dia útil de manhã. Na Colombo, o salão de cima (almoço) é caro; pro café rápido fique no balcão térreo. Em rua cheia, atenção a batedor de carteira e não ande exibindo celular/câmera.",
-    "fairPrice": "Real Gabinete: grátis (leve documento). Café + pastel de nata no balcão da Colombo ~R$10–20. Chope no Arco do Teles ~R$10–14. Visita guiada do Theatro Municipal ~R$20 (meia R$10), confira a agenda."
+    "fit": ["all"],
+    "content": "Confeitaria Colombo (1894) → Cinelândia: National Fine Arts Museum, Municipal Theatre, National Library → Paço Imperial → Candelária Church → Real Gabinete Português",
+    "trap": "Don't do this itinerary on Sundays — many places close and Centro gets very empty. Best to go Tuesday through Friday, during business hours. Monday can also be problematic since several museums and cultural venues close or operate with reduced hours. The Centro Confeitaria Colombo is closed on Sundays and may have a long queue for seating. Real Gabinete is only open on weekdays, so don't count on it on Saturdays, Sundays, or holidays. The National Fine Arts Museum has limited hours or may be closed for renovation, so don't plan your route around an interior visit. In the Candelária/Paço/Real Gabinete stretch, watch your phone and avoid empty side streets after hours.",
+    "fairPrice": "National Fine Arts Museum: R$20 (full price) / free on Sundays; Municipal Theatre: guided tour R$20 (full price); National Library, Paço Imperial, Candelária and Real Gabinete Português: free",
+    "extras": ""
   },
   {
     "id": "CH2",
-    "title": "Porto + Boulevard Olímpico + Museu do Amanhã + MAR",
+    "title": "Porto + Olympic Boulevard + Museum of Tomorrow + MAR",
     "vibePrimary": "cultura",
     "vibeSecondary": null,
     "zona": "Centro/Porto",
@@ -94,16 +89,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "kids_ok"
-    ],
-    "content": "A zona portuária revitalizada (Porto Maravilha). Comece no Boulevard Olímpico vendo o mural gigante 'Etnias', do Kobra (um dos maiores do mundo). Entre no Museu do Amanhã (prédio futurista do Calatrava na ponta do píer) — ciência e futuro, ótimo com crianças — e no MAR (Museu de Arte do Rio), ao lado. Pegue o pôr do sol na Praça Mauá com o Pão de Açúcar ao fundo. Dá pra emendar com a Pedra do Sal (perto) se for segunda à noite.",
-    "trap": "Museu do Amanhã fecha segunda. Costuma ser de graça às terças (confirme) e por isso LOTA — vá cedo ou em outro dia. A região é ótima de dia/fim de tarde, mas esvazia à noite fora dos dias de evento: não saia andando sozinho por ruas vazias depois. Recuse 'guia' não oficial que aborda na Praça Mauá.",
-    "fairPrice": "Museu do Amanhã ~R$30 (meia R$15), grátis às terças. MAR ~R$20–30. Boulevard e mural do Kobra: grátis. VLT pra chegar ~R$4,30."
+    "fit": ["kids_ok"],
+    "content": "Museum of Tomorrow + Museum of Art of Rio (MAR), in the Porto/Olympic Boulevard area",
+    "trap": "Museum of Tomorrow and MAR may have specific closure days or reduced hours — always check before going. Museum of Tomorrow usually requires timed entry tickets. The Olympic Boulevard area is fine for walking during the day but can feel empty at night in some stretches.",
+    "fairPrice": "Museum of Tomorrow: full R$40 / half R$20; MAR: full R$20 / half R$10 (free on Tuesdays)",
+    "extras": "Best done during the day. Can be combined with VLT, AquaRio, or Yup Star Ferris Wheel depending on time. Keep in mind the strong heat, limited shade in some stretches, and walking distances between spots."
   },
   {
     "id": "CH3",
-    "title": "Santa Teresa boêmia + Parque das Ruínas + Selarón",
+    "title": "Bohemian Santa Teresa + Parque das Ruínas + Selarón Steps",
     "vibePrimary": "cultura",
     "vibeSecondary": "noturna",
     "zona": "Santa Teresa/Lapa",
@@ -111,16 +105,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "Suba de bondinho (o bonde de Santa voltou a circular) ou Uber pelas ladeiras. Santa Teresa é o bairro de ateliê, casarão e boteco. Parque das Ruínas: mirante grátis num casarão restaurado, com uma das melhores vistas do Centro e da baía. Largo dos Guimarães e Largo das Neves pros botecos (Bar do Mineiro pra feijoada e petisco). Desça a pé pela Escadaria Selarón (215 degraus de azulejo do artista Selarón) ligando Santa à Lapa. Feche na Lapa à noite.",
-    "trap": "A Selarón vive cheia e é point de batedor de carteira e de camelô empurrando 'azulejo souvenir' caro — vá de manhã pra foto sem multidão e não pare distraído. Santa Teresa tem trechos isolados: ande pelas ruas movimentadas e prefira Uber a subir/descer ladeira a pé à noite. O bonde tem horário e fila. Não compre 'tour' de quem aborda na escadaria.",
-    "fairPrice": "Parque das Ruínas e Selarón: grátis. Bonde de Santa Teresa ~R$20 (turístico). No Bar do Mineiro: petisco ~R$15–25, chope ~R$12."
+    "fit": ["all"],
+    "content": "Santa Teresa Tram → Parque das Ruínas (viewpoint + gallery) → Museu Chácara do Céu → Selarón Steps (exit via Carioca metro station)",
+    "trap": "Don't leave it too late — Santa Teresa is beautiful during the day and early afternoon, but some streets get empty by evening. The tram can have a queue and fill up quickly, especially on Saturdays, holidays, and peak season. Tram tickets are sold at Carioca Station and passengers generally need to be present on the platform. Parque das Ruínas/Parque Glória Maria closes on Tuesdays, so this itinerary doesn't work that day. Chácara do Céu also closes on Tuesdays. The Selarón Steps gets crowded and you should watch your phone, bag, and the time spent taking photos, especially near the bottom, close to Lapa.",
+    "fairPrice": "Santa Teresa Tram: R$20 (round trip)",
+    "extras": ""
   },
   {
     "id": "CH4",
-    "title": "Contemplativo: São Bento / Catedral / Convento de Santo Antônio",
+    "title": "Contemplative: São Bento / Cathedral / Santo Antônio Convent",
     "vibePrimary": "cultura",
     "vibeSecondary": null,
     "zona": "Centro/Porto",
@@ -128,16 +121,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "solo_friendly"
-    ],
-    "content": "Roteiro silencioso e gratuito. Mosteiro de São Bento: igreja toda folheada a ouro (barroco), uma das mais impressionantes do Brasil — vá no domingo às 10h pra missa com canto gregoriano dos monges, experiência única. Convento de Santo Antônio (largo da Carioca): claustro tranquilo e parede de ex-votos, escondido do caos. Catedral Metropolitana (a 'cônica' modernista) com vitrais do chão ao teto. Tudo a pé no Centro.",
-    "trap": "Horários restritos e fecham pra eventos religiosos — São Bento separa horário de visita e de missa; chegue cedo. Em São Bento, traje adequado (ombro/joelho cobertos) e silêncio. O Convento fecha no almoço. Domingo o entorno (Centro) é vazio — faça de manhã e não circule por ruas desertas.",
-    "fairPrice": "Todos grátis (igreja/convento — doação opcional). Só transporte. Missa de domingo em São Bento: grátis; chegue ~9h pra pegar lugar."
+    "fit": ["solo_friendly"],
+    "content": "Mosteiro de São Bento (Rua Dom Gerardo, 40) → Metropolitan Cathedral of São Sebastião (Av. República do Chile, 245) → Convento de Santo Antônio (Largo da Carioca, 5)",
+    "trap": "Check Mosteiro de São Bento's hours on their website/Instagram beforehand; arrive early if you want to attend a service. Don't approach this itinerary like a \"museum tour\" — these are religious spaces, so some areas may be closed for Mass, prayer, internal events, or maintenance. At São Bento, the visit is mostly restricted to the church, not the monastery as a whole. The walk up to the Monastery can be tiring and the Centro surroundings call for attention to your phone and bag. The Cathedral is free and impressive, but the surrounding area can be empty outside business hours. The Convento de Santo Antônio is at Largo da Carioca with plenty of daytime movement — avoid late afternoon/evening.",
+    "fairPrice": "",
+    "extras": "Best done on a weekday, in the morning or early afternoon. Most practical order: Mosteiro de São Bento → Metropolitan Cathedral → Convento de Santo Antônio. Use metro/VLT/ride app to optimize: the Monastery is closer to the Praça Mauá/Uruguaiana area, while the Cathedral and Convent are closer to Carioca. For a more beautiful experience, try to time São Bento during Mass or Gregorian chant, but with a respectful attitude — don't treat it as a standard tourist attraction. This itinerary suits those who enjoy architecture, silence, sacred art, and colonial history, but it's not ideal for those looking for buzz or many Instagram-worthy shots."
   },
   {
     "id": "NM1",
-    "title": "Lapa à noite por dia da semana (Arcos + roda certa)",
+    "title": "Lapa at night (Arcos + right crowd)",
     "vibePrimary": "noturna",
     "vibeSecondary": null,
     "zona": "Santa Teresa/Lapa",
@@ -145,16 +137,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": "qualquer (varia)",
-    "fit": [
-      "not_kids"
-    ],
-    "content": "Lapa não é igual todo dia. Sex/sáb é o caos lotado e turístico dos Arcos. O segredo é o meio de semana: Rio Scenarium e Carioca da Gema (casas clássicas de samba) bombam de qui a sáb com banda ao vivo; o Beco do Rato tem samba raiz num boteco. Programa de local: petiscar antes, chegar nas casas até ~22h e alternar entre rua (cerveja de lata) e casa de show. Pra samba de segunda, a Pedra do Sal ali perto.",
-    "trap": "A Lapa concentra furto e abordagem — ande com pouco dinheiro, celular no bolso da frente, nada de bolsa aberta. Cuidado com bebida de ambulante 'batizada' e com casas que cobram couvert artístico alto + consumação mínima não avisada: pergunte ANTES de sentar e confirme se há show na noite (qui–sáb), senão você paga entrada por nada. Vá e volte de Uber/táxi; não ande sozinho nas ruas escuras ao redor.",
-    "fairPrice": "Cerveja de lata na rua ~R$8–10. Couvert das casas (Rio Scenarium, Carioca da Gema) ~R$30–60 conforme a noite. Caipirinha dentro ~R$20–30. Sempre cheque couvert + consumação mínima antes."
+    "fit": ["not_kids"],
+    "content": "Arcos da Lapa + nearby bars (e.g.: Arco-Íris da Lapa, Boteco da Garrafa, Booze Bar, Botequim Vaca Atolada – roots samba)",
+    "trap": "Don't assume Lapa is the same every night — the best crowd is usually Thursday, Friday, and Saturday. During the week it can be quite empty, and empty Lapa isn't always safe. Avoid wandering alone down side streets with your phone out or after drinking too much. The Arcos are beautiful for photos, but the area requires attention, especially late at night. Watch out for street drink \"promotions,\" parking hustlers, people pulling you into bars or shows, and cover charges added without warning. Always ask beforehand if there's an entrance fee, artistic cover, minimum spend, or service charge.",
+    "fairPrice": "Lapa street bar price range: ~R$40–100 per person (varies by bar)",
+    "extras": ""
   },
   {
     "id": "NM2",
-    "title": "Roda de samba na Pedra do Sal",
+    "title": "Samba circle at Pedra do Sal",
     "vibePrimary": "noturna",
     "vibeSecondary": null,
     "zona": "Centro/Porto",
@@ -162,16 +153,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": "seg ou sex",
-    "fit": [
-      "solo_friendly"
-    ],
-    "content": "O berço do samba carioca, na Pequena África (zona portuária). A roda histórica e mais autêntica é na SEGUNDA-feira, das ~19h à meia-noite, ao pé da pedra (escadaria do Morro da Conceição), de graça e ao ar livre. Os músicos se revezam no mesão, a cantoria é no gogó e todo mundo fica de pé ou sentado na escadaria com cerveja. Vibe democrática e local. Sex–dom também tem programação, mais turística. Tem baiana de acarajé no largo.",
-    "trap": "A roda tradicional é na SEGUNDA — em outros dias pode não rolar. Lota e fica num bairro que esvazia: chegue cedo, vá e volte de Uber/táxi (ou metrô Uruguaiana/Carioca). Leve só o necessário, celular guardado, atenção à bolsa na multidão. A cerveja é por ficha de latão: guarde as fichas. Respeite — é território quilombola e de resistência, não 'atração' pra tumultuar.",
-    "fairPrice": "Entrada: grátis. Cerveja por ficha ~R$10 (em geral 3 latas por valor combinado na barraca). Acarajé da baiana ~R$15–25. Uber da ZS ~R$30–50."
+    "fit": ["solo_friendly"],
+    "content": "",
+    "trap": "The most traditional circle happens on Mondays, so don't assume any night will have the same experience. Friday through Monday can have movement and parties in the area, but the classic official circle is Monday. If it rains, it may be cancelled or lose its atmosphere entirely — it's an outdoor event. Arrive early, around 6:30–7:30pm, as it gets very crowded and hard to move around. Watch your phone, open bags, and drinks left unattended. Avoid going by car — parking is a hassle and you may face hustlers charging a lot. On the way back, order a ride on a busy street or go in a group to the VLT/metro.",
+    "fairPrice": "",
+    "extras": ""
   },
   {
     "id": "NM3",
-    "title": "Bares de Botafogo/Humaitá (Meza, Cafofo, Macaco Caolho)",
+    "title": "Botafogo/Humaitá bars (Meza, Cafofo, Macaco Caolho)",
     "vibePrimary": "noturna",
     "vibeSecondary": "gastronomia",
     "zona": "Zona Sul",
@@ -179,16 +169,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "not_kids"
-    ],
-    "content": "O eixo de bar mais 'carioca atual' da Zona Sul, sem ser turístico. Cafofo Pub e Comuna (Botafogo) pra cerveja artesanal, petisco e hambúrguer cult; Meza Bar (Humaitá) pra coquetelaria e tapas; Macaco Caolho e o entorno da Voluntários/Nelson Mandela pra barzinho. Programa de local: começar cedo (~19h) num happy hour e ir migrando a pé entre os bares. Botafogo virou polo gastronômico jovem.",
-    "trap": "Não é zona perigosa, mas é movimentada à noite — olho no celular nas mesas da calçada. Os bares badalados enchem e a espera é longa (sem reserva): chegue antes das 20h sex/sáb. Confira a conta: muitos cobram 10% de serviço (opcional por lei) + couvert se tiver música. Estacionar é difícil — vá de Uber/metrô (estação Botafogo).",
-    "fairPrice": "Chope artesanal ~R$14–22. Drink autoral no Meza ~R$28–42. Porção/petisco ~R$35–65. Hambúrguer ~R$35–50. Serviço de 10% é opcional."
+    "fit": ["not_kids"],
+    "content": "Meza Bar (Rua Capitão Salomão, 69 – Humaitá) → Macaco Caolho Rock 'n Drinks (Rua Capitão Salomão, 57 – Humaitá) → Cafofo Bar (Rua Nelson Mandela, 100, Loja 106 – Botafogo)",
+    "trap": "Don't treat this as an easy walking bar hop between all three — Meza and Macaco Caolho are side by side in Humaitá, but Cafofo is in Botafogo near Rua Nelson Mandela/metro, so you may need an Uber or a longer walk. Meza is more of a gastrobar/cocktails place and can be pricier — it's not a cheap boteco. Macaco Caolho depends heavily on the rock lineup, so check their Instagram before going. There may be a cover charge depending on the day and time. Cafofo is more casual, good for draft beer and snacks, but can get crowded during happy hour. Always ask about cover charges, entrance fees, minimum spend, and service charges before sitting down.",
+    "fairPrice": "Meza Bar: ~R$80–130; Macaco Caolho: ~R$70–120; Cafofo Bar: ~R$60–100 per person",
+    "extras": ""
   },
   {
     "id": "NM4",
-    "title": "Gafieira / forró / casa de show (deep cut)",
+    "title": "Gafieira / forró / live music venue (deep cut)",
     "vibePrimary": "noturna",
     "vibeSecondary": null,
     "zona": "Varia",
@@ -196,16 +185,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": "qualquer (varia)",
-    "fit": [
-      "not_kids"
-    ],
-    "content": "O 'deep cut' pra quem quer dançar de verdade. Gafieira: a Estudantina Musical (Praça Tiradentes) é a clássica pra samba e dança de salão. Forró: casas em São Cristóvão e no Centro com banda de pé-de-serra ao vivo. Casa de show: Circo Voador e Fundição Progresso (Lapa) pros shows. Programa de local: ver a agenda da semana e ir atrás do que está tocando, não de um lugar fixo.",
-    "trap": "A programação VARIA muito — não adianta aparecer sem checar a agenda da casa/data (algumas só abrem em noites específicas). Praça Tiradentes/Centro à noite: vá e volte de carro. Gafieira às vezes tem aula antes da dança — chegue no horário certo. Confira couvert/ingresso e se é dia de baile.",
-    "fairPrice": "Entrada de gafieira/forró ~R$20–40. Show no Circo Voador/Fundição ~R$60–150 conforme a atração (compre antecipado). Cerveja dentro ~R$12–18."
+    "fit": ["not_kids"],
+    "content": "",
+    "trap": "Don't go without checking the lineup for that night — gafieira, forró, and samba change a lot depending on the night, and the same venue can have different styles throughout the week. Some events sell advance tickets and get more expensive at the door. Avoid arriving too late if you want to dance, as traditional venues fill up and it gets hard to move. At live music venues, always confirm if there's an entrance fee, cover charge, minimum spend, artistic cover, and accepted payment methods. In Lapa/Centro, be careful arriving and leaving — use a ride app, metro/VLT at a safe hour, or go in a group.",
+    "fairPrice": "",
+    "extras": ""
   },
   {
     "id": "NT1",
-    "title": "Cristo Redentor (Trem do Corcovado)",
+    "title": "Cristo Redentor (Corcovado Train)",
     "vibePrimary": "natureza",
     "vibeSecondary": null,
     "zona": "Tijuca",
@@ -213,16 +201,15 @@
     "essentialFirstTime": true,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "Pouco a improvisar — é o cartão-postal obrigatório. O melhor jeito é o Trem do Corcovado, saindo de Cosme Velho: ~20 min subindo pela Mata Atlântica do Parque Nacional da Tijuca, bem mais bonito que ir de van. Vá no PRIMEIRO horário (8h), céu limpo, antes da multidão e da neblina que sobe à tarde. Compre online com hora marcada. No alto, vá até o lado de trás da estátua pra ver Lagoa e Ipanema, não só a Baía.",
-    "trap": "É hora marcada e esgota: compre antecipado no site oficial (tremdocorcovado.rio), NUNCA com cambista/'agência' que aborda em Cosme Velho cobrando o dobro. Depende 100% do tempo — em dia nublado você sobe e não vê NADA; cheque a previsão e prefira manhã de céu limpo. O trem não vende pra mesma hora na bilheteria. Ignore 'fura-fila' de falso guia.",
-    "fairPrice": "Trem ida/volta + monumento: ~R$134 adulto (idoso ~R$70; estudante/PcD ~R$107). A pé pela trilha (só ingresso do monumento): ~R$58. Horário 8h–19h. Só site oficial ou ponto credenciado."
+    "fit": ["all"],
+    "content": "Cristo Redentor via Corcovado Train",
+    "trap": "Don't leave it to chance — the Corcovado Train has set departure times and the best slots can sell out, especially on weekends, holidays, and peak season. Arrive early: the official website states check-in must be done at least 30 minutes before departure. Missing your slot can become a real headache. Don't go on a cloudy day hoping \"it'll clear up at the top\" — often the view disappears completely. Avoid taxi drivers or guides offering \"shortcuts\" or packages on the street. Buy through the official channel or a trusted partner.",
+    "fairPrice": "Corcovado Train + Cristo entry: R$134 adult.\nChild 7–11 / student / disabled / ID Jovem: R$107.\nSenior: R$70.\nChildren under 6: free, on lap with proof.\nTicket includes round-trip train + monument access. Departure station: Cosme Velho, Rua Cosme Velho, 513.",
+    "extras": "Best times: first train of the morning or late afternoon on a clear day. Morning is usually less crowded and safer for a clean view. The train journey takes about 20 minutes and passes through the Tijuca Forest."
   },
   {
     "id": "NT2",
-    "title": "Pão de Açúcar + Praia Vermelha + Pista Cláudio Coutinho",
+    "title": "Sugarloaf + Praia Vermelha + Cláudio Coutinho Trail",
     "vibePrimary": "natureza",
     "vibeSecondary": null,
     "zona": "Zona Sul",
@@ -230,16 +217,15 @@
     "essentialFirstTime": true,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "O outro cartão obrigatório, com toque local: antes (ou em vez) de pagar o bondinho inteiro, faça a Pista Cláudio Coutinho — caminho plano e gratuito à beira-mar saindo da Praia Vermelha, com micos e vista. Dela sai a trilha de graça que sobe o Morro da Urca (1ª parada); de lá você só paga o 2º trecho do teleférico até o Pão de Açúcar (mais barato). Vá no fim da tarde pra ver a cidade acender no topo. Mergulho na Praia Vermelha antes.",
-    "trap": "Compre online — a bilheteria tem fila de horas. Depende do tempo (nublado não vê nada). No pôr do sol o bondinho lota e o último embarque encerra ~18h30–19h, confira pra não ficar preso. A trilha da Urca é tranquila de dia, mas NÃO suba sozinho de manhã cedo ou no fim da tarde (já houve assalto na mata) — vá em grupo e com luz. Os micos roubam: não dê comida nem deixe bolsa aberta.",
-    "fairPrice": "Bondinho completo: inteira ~R$199; nascido/morador no Brasil ~R$155; carioca 50% de desconto; idoso/criança ~R$99. Pista e trilha da Urca: grátis. Só o 2º trecho (Urca→Pão) sai bem mais barato. Horário ~8h–20h."
+    "fit": ["all"],
+    "content": "Sugarloaf Cable Car → Praia Vermelha → Cláudio Coutinho Trail (shaded walk) → finish at Mureta da Urca (Bar Urca)",
+    "trap": "Buy online (bondinho.com.br) to avoid queues and secure the best time slot. Hours: Mon–Thu 8:30am–8pm (last cable car 6:30pm); Fri–Sun 8:30am–9pm (last 7:30pm). Don't buy from scalpers or \"guides\" offering easy access at the entrance. Best to buy through the official website/trusted partner, especially on weekends, holidays, and peak season. The cable car can have long lines even with a ticket bought. Avoid going on a cloudy day as the view may disappear. The Cláudio Coutinho Trail has set hours and is not a place to enter at night. If doing the Morro da Urca hike via the trail, note it involves climbing, can be tiring, and the park access gate from the top has a closing time.",
+    "fairPrice": "Cable car from R$195",
+    "extras": ""
   },
   {
     "id": "NT3",
-    "title": "Trilha Pedra Bonita ou Dois Irmãos (Vidigal)",
+    "title": "Pedra Bonita or Dois Irmãos hike (Vidigal)",
     "vibePrimary": "natureza",
     "vibeSecondary": null,
     "zona": "Zona Sul",
@@ -247,16 +233,15 @@
     "essentialFirstTime": false,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "not_kids"
-    ],
-    "content": "Duas trilhas de vista absurda. Pedra Bonita (São Conrado): subida curta (~30–40 min), fácil, leva à rampa de voo livre — é dali que saem os parapentes, com vista de toda a orla. Morro Dois Irmãos: acesso pela comunidade do Vidigal (suba de mototáxi/Kombi até o Alto), trilha de ~1h, e o topo tem uma das melhores vistas do Rio (Ipanema, Leblon, Lagoa). Vá bem cedo (6–7h) pra fugir do sol e pegar o mar de neblina. Desça pra praia depois.",
-    "trap": "Vá cedo: depois das 10h o calor castiga. Dois Irmãos passa pelo Vidigal — é tranquilo e receptivo, mas vá de tênis, respeite os moradores e, se inseguro, com guia local da própria comunidade. Não suba sozinho em trilha vazia; prefira fim de semana, quando há movimento. Mototáxi é a forma local de subir o morro até o início da trilha. Na chuva a rocha escorrega.",
-    "fairPrice": "Trilhas: grátis. Mototáxi no Vidigal até o Alto ~R$10–15. Guia local (opcional) ~R$50–80. Voo de parapente na Pedra Bonita (se quiser) ~R$500–700 o duplo — procure instrutor credenciado."
+    "fit": ["not_kids"],
+    "content": "",
+    "trap": "Don't choose based solely on the photo — they're very different experiences. Pedra Bonita is easier, logistically safer, and better for those who want a beautiful hike without much complexity. Dois Irmãos has an incredible view but involves entering through Vidigal, a motorbike taxi/van to the trailhead, and more attention needed for safety and logistics. Don't go in flip-flops, don't underestimate the heat, and don't attempt either without water. Avoid rainy or post-rain days — the trail can be slippery and the view can close in. For sunrise at Dois Irmãos, ideally go with a guide.",
+    "fairPrice": "",
+    "extras": "Want an easier, less complex hike? Pedra Bonita.\nWant a more dramatic view and a rawer experience? Dois Irmãos/Vidigal.\nWant to avoid hassle? Go to Pedra Bonita in the morning.\nWant sunrise at Dois Irmãos? Go with a guide."
   },
   {
     "id": "NT4",
-    "title": "Floresta da Tijuca + Vista Chinesa",
+    "title": "Tijuca Forest + Vista Chinesa",
     "vibePrimary": "natureza",
     "vibeSecondary": null,
     "zona": "Tijuca",
@@ -264,16 +249,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "A maior floresta urbana do mundo, dentro da cidade. Suba de carro/Uber pela Floresta da Tijuca e pare na Vista Chinesa (mirante em pagode oriental, vista da Lagoa e do Cristo), na Cascatinha Taunay (cachoeira) e na Capela Mayrink. Ar fresco, mata fechada, micos e tucanos. Programa de fim de semana: levar a família e, pros mais dispostos, trilha até o Pico da Tijuca. Bem mais vazio e fresco que a praia.",
-    "trap": "Praticamente só de carro/Uber/bike — não há transporte público bom e andar pelas estradas da mata é arriscado e longo. Vá de dia e saia antes de escurecer (a floresta esvazia). Estradas estreitas e sinuosas, com ciclista e pedestre na pista. Na Vista Chinesa já houve relato de assalto a quem fica isolado — prefira horário movimentado e não pare sozinho. Não alimente os micos.",
-    "fairPrice": "Entrada do Parque Nacional/Floresta: grátis. Custo é só transporte (Uber da ZS ~R$40–70). Leve água e lanche — estrutura mínima."
+    "fit": ["all"],
+    "content": "",
+    "trap": "Not ideal if you're relying only on Uber — it can be hard to get a car inside the forest, especially at the end of the day. Best to go by car, with a driver/guide, or on an organized tour. Vista Chinesa is a quick stop viewpoint, not a place with much infrastructure. Don't count on bathrooms, food, or strong signal at all points. On cloudy, rainy, or foggy days the view can disappear. Avoid entering trails without knowing the route, and don't go late — the park has set hours and some paths may close due to fallen trees, heavy rain, or maintenance.",
+    "fairPrice": "",
+    "extras": ""
   },
   {
     "id": "GB1",
-    "title": "Rota de boteco curada (3 com motivo, não a lista toda)",
+    "title": "Curated boteco route (3 with a reason, not the whole list)",
     "vibePrimary": "gastronomia",
     "vibeSecondary": "noturna",
     "zona": "Zona Sul",
@@ -281,16 +265,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "not_kids"
-    ],
-    "content": "Em vez da 'lista dos 10', três botecos com propósito numa caminhada. No eixo Botafogo/Flamengo/Catete: Adega da Velha pra bolinho de bacalhau e cerveja estupidamente gelada; Bar do Adão pros pastéis recheados; um pé-sujo clássico tipo Belmonte pra fechar com chope e empada. Filosofia local: chope a 0°, petisco campeão e mesa na calçada. Peça sempre o 'carro-chefe' de cada casa.",
-    "trap": "'Boteco premiado' (época do Comida di Buteco) enche e às vezes piora no período do prêmio. O chope tem que sair gelado e com colarinho certo — se vier choco, reclame. Atenção aos 10% de serviço (opcional) e à conta de petisco, que soma rápido. Na calçada, celular no bolso, não na mesa. Alguns pés-sujos só aceitam dinheiro.",
-    "fairPrice": "Chope ~R$10–16. Bolinho de bacalhau/porção ~R$35–70 (serve 2–3). Empada ~R$12–18. Caipirinha ~R$18–25. Leve dinheiro pros mais raiz."
+    "fit": ["not_kids"],
+    "content": "Route suggestions: Boteco Belmonte (Copacabana), Jobi (Leblon) and Bar Bracarense (Leblon) – Rio boteco classics",
+    "trap": "These are Zona Sul classics in expensive, touristy areas. Belmonte in Copacabana is great to start, but can get packed with a queue, especially at night and on weekends. Jobi and Bracarense are both in Leblon, so it makes more sense to pick just one if you don't want to spend too much or keep bar-hopping. Watch the bill — snacks + draft beer + 10% service charge adds up fast. Always check the menu before ordering the \"house suggestion.\"",
+    "fairPrice": "Boteco Belmonte: ~R$60–110; Jobi: ~R$70–120; Bar Bracarense: ~R$60–100 per person",
+    "extras": "1. Boteco Belmonte — for a classic start in Copacabana\nGreat for those who want a carioca boteco with draft beer, empada, snacks and a lively scene. It's the easiest to include if you're staying in Copacabana/Ipanema.\n\n2. Jobi — for the traditional Leblon late-night scene\nBest for those who want a late-night vibe, draft beer, and a hard-to-get table. It's a classic, but may feel pricey for what it delivers if you're expecting a simple boteco.\n\n3. Bracarense — to close with a carioca landmark\nMore of a neighborhood institution than a trendy bar. Great for those who want a Leblon classic with tradition, fried snacks, and cold draft beer."
   },
   {
     "id": "GB2",
-    "title": "Feira + comida (Cobal do Humaitá; Feira de São Cristóvão)",
+    "title": "Market + food (Cobal do Humaitá; Feira de São Cristóvão)",
     "vibePrimary": "gastronomia",
     "vibeSecondary": "cultura",
     "zona": "Varia",
@@ -298,16 +281,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "kids_ok"
-    ],
-    "content": "Dois mundos. Cobal do Humaitá: antigo mercado de hortifruti que à noite vira pátio de bares e restaurantes ao ar livre (pizza, japonês, boteco) — clima de bairro, bom pra grupo e família no começo da noite. Feira de São Cristóvão (Centro Luiz Gonzaga): a 'embaixada do Nordeste' no Rio, com forró pé-de-serra ao vivo, carne de sol, baião, cachaça e barracas. Vá sex/sáb à noite, quando o forró vai até de madrugada. Autêntico e barato.",
-    "trap": "A Feira de São Cristóvão é grande e fica numa região que esvazia: vá e volte de Uber/táxi, de preferência sex/sáb (dia de forró), e fique na área das barracas. Atenção à carteira na multidão; algumas barracas cobram couvert do forró — confira. A Cobal é tranquila, mas lota sex/sáb: chegue cedo pra mesa.",
-    "fairPrice": "Feira de São Cristóvão: entrada ~R$10–15 no fim de semana, couvert do forró ~R$10–20. Carne de sol/baião ~R$40–70 (serve 2). Na Cobal: chope ~R$12–16, pizza/prato ~R$40–80."
+    "fit": ["kids_ok"],
+    "content": "",
+    "trap": "Don't think of them as similar experiences — Cobal do Humaitá is more of a gastro hub/neighborhood bar scene in Zona Sul; Feira de São Cristóvão is a northeastern cultural experience with food, music, dance, shops, and a more popular feel. Cobal is better for lunch, happy hour, or casual dinner; Feira de São Cristóvão is better as a full evening out, especially Friday or Saturday night. At the Feira, check if there's a special show or event, as that can change prices, crowds, and how it runs. Don't expect \"super cheap food\" at either — you can eat well, but drinks + snacks + fees can add up.",
+    "fairPrice": "",
+    "extras": "Want practical food/drinks in Zona Sul? Cobal do Humaitá.\nWant a cultural experience with northeastern food and forró? Feira de São Cristóvão.\nWant a livelier night? Feira on Friday/Saturday.\nWant something easier to fit into your itinerary? Cobal."
   },
   {
     "id": "GB3",
-    "title": "Café, brunch & especialidades",
+    "title": "Coffee, brunch & specialties",
     "vibePrimary": "gastronomia",
     "vibeSecondary": null,
     "zona": "Zona Sul",
@@ -315,16 +297,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "A cena de café especial do Rio cresceu. Curto Café (Centro, balcão minúsculo cult) e Largo do Café pro coado de grão especial; Slow Bakery (Botafogo) pro pão de fermentação natural; Plage Café (Parque Lage) pra brunch com vista. Programa de fim de semana: brunch sem pressa — ovos, pão bom e café coado. E a versão raiz: pão na chapa com café com leite no balcão da padaria de bairro.",
-    "trap": "Brunch badalado (Slow Bakery, Plage) tem fila no fim de semana — chegue na abertura ou vá em dia de semana. O café 'gourmet' da ZS turística cobra caro pelo ambiente; o pão na chapa do balcão da padaria custa um terço e é tão bom. Confira os 10% de serviço no brunch.",
-    "fairPrice": "Café coado especial ~R$8–14; cappuccino ~R$12–18. Brunch completo ~R$50–90. Pão na chapa + café com leite na padaria ~R$12–20."
+    "fit": ["all"],
+    "content": "Confeitaria Colombo (1894, Centro) and breakfast with a view at Copacabana Fort",
+    "trap": "Don't expect cheap coffee — both Confeitaria Colombo in Centro and the Fort café are classic/tourist experiences, so you're paying for the place, the history, and the view. Colombo in Centro is closed on Sundays, so don't plan this itinerary on a Sunday. At Copacabana Fort, the café operates first-come first-served on weekends/holidays and can have long lines. You also need to pay the Fort entrance fee to access the cafés. Don't count on easy parking at the Fort.",
+    "fairPrice": "Copacabana Fort: R$10 (full price) / free on Tuesdays",
+    "extras": "Confeitaria Colombo in Centro is better for those who want history, architecture, a classic photo, and a more symbolic old-Rio café experience. The Fort breakfast is better for those who want a view of Copacabana and the sea — more of a postcard experience. For an efficient itinerary: do Colombo Centro with the historic downtown/Cinelândia/Real Gabinete; do Fort café with Copacabana, Arpoador, or Ipanema."
   },
   {
     "id": "DT1",
-    "title": "Búzios (bate-volta)",
+    "title": "Búzios (day trip)",
     "vibePrimary": "bate-volta",
     "vibeSecondary": "praia",
     "zona": "Fora do Rio",
@@ -332,16 +313,15 @@
     "essentialFirstTime": false,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "~2h30–3h de carro a leste do Rio. Vila charmosa de rua de pedra (Rua das Pedras), Orla Bardot e dezenas de praias — Geribá (jovem/surf), Ferradura (calma, família), João Fernandes (água clara, snorkel), Azeda. Bate-volta: escolha 1–2 praias (não tente todas), almoce frutos do mar e caminhe a Rua das Pedras no fim de tarde. Passeio de escuna ou buggy pra ver várias praias rápido. Rende mais com pernoite.",
-    "trap": "Bate-volta de Búzios é corrido e o trânsito na volta (domingo/feriado à tarde-noite) é brutal — saia muito cedo e volte cedo, ou pernoite. Búzios é cara e turística: restaurante da Rua das Pedras cobra preço de point. Excursão 'barata' às vezes empurra parada em loja por comissão. Estacionamento na vila é difícil e pago.",
-    "fairPrice": "Almoço de frutos do mar ~R$80–150 por pessoa na orla. Escuna ~R$80–130. Pedágio + combustível ida/volta ~R$150–250 de carro. Caipirinha na Rua das Pedras ~R$30–45."
+    "fit": ["all"],
+    "content": "Búzios – day trip (beautiful beaches + charming town). Travel time: about 2h–2h30",
+    "trap": "Head back before late afternoon to avoid traffic. Don't try to visit many beaches in one day — Búzios has scattered beaches and awkward internal transport. Don't count on an empty beach in peak season. Parking near Centro/Rua das Pedras and the beaches can be expensive and competitive.",
+    "fairPrice": "",
+    "extras": "Want to do the day trip anyway? Leave very early and pick just a few stops.\nWant to enjoy it without rushing? Stay one night.\nWant beach + a charming town center? João Fernandes/Azedinha + Orla Bardot/Rua das Pedras.\nWant to avoid hassle? Don't go on a holiday, in summer, or on a Sunday on the way back to Rio."
   },
   {
     "id": "DT2",
-    "title": "Ilha Grande / Angra (bate-volta)",
+    "title": "Ilha Grande / Angra (day trip)",
     "vibePrimary": "bate-volta",
     "vibeSecondary": "natureza",
     "zona": "Fora do Rio",
@@ -349,16 +329,15 @@
     "essentialFirstTime": false,
     "weatherDependent": true,
     "dayConstraint": null,
-    "fit": [
-      "all"
-    ],
-    "content": "Costa Verde: ~2h30 de carro até Conceição de Jacareí ou Angra, depois barco pra Ilha Grande (sem carro na ilha, mata preservada). A Vila do Abraão é a base; de lá, barco/táxi-boat até Lopes Mendes (uma das praias mais bonitas do mundo, areia que 'canta'). Ou escuna pelas piscinas naturais e Lagoa Azul de Angra, com snorkel. Bate-volta: pegue a primeira barca, faça um passeio de barco e volte no fim da tarde.",
-    "trap": "A logística aperta pra bate-volta — tudo depende da barca/lancha: perdeu a última de volta, dormiu na ilha. Cheque os horários de Conceição de Jacareí/Angra e volte com folga. Lopes Mendes exige barco + caminhada (~20 min), não é 'chega e pronto'. Mar aberto dá enjoo e mar agitado cancela passeio. Em um dia só é cansativo; pernoite rende muito mais.",
-    "fairPrice": "Lancha/barca Conceição de Jacareí ↔ Abraão ~R$50–100 ida/volta (lancha rápida custa mais que a barca). Escuna na ilha ~R$80–150. Táxi-boat até Lopes Mendes ~R$40–60. Combustível + pedágio do Rio ~R$150–250."
+    "fit": ["all"],
+    "content": "Angra dos Reis / Ilha Grande – crystal-clear water beaches, islands, and boat tours",
+    "trap": "It's a tiring day (long travel) — choose consciously. The biggest mistake is treating Ilha Grande and Angra as the same kind of trip. For a day trip from Rio, Angra with a boat tour is usually more feasible. Ilha Grande is more complicated because it requires road travel + crossing + boat schedules + internal transport. Missing the last crossing back is a serious problem. Also don't try to do Lopes Mendes as a regular day trip — it's stunning but requires more time and planning.",
+    "fairPrice": "",
+    "extras": "Want a more practical day trip? Angra + boat tour.\nWant the real Ilha Grande experience? Stay 1 or 2 nights.\nWant to save money? Shared schooner.\nWant comfort and more beaches? Shared speedboat.\nWant to avoid hassle? Don't go on a holiday, in the rain, or on a Sunday on the way back to Rio."
   },
   {
     "id": "DT3",
-    "title": "Petrópolis — império + serra (bate-volta)",
+    "title": "Petrópolis — empire + mountains (day trip)",
     "vibePrimary": "bate-volta",
     "vibeSecondary": "cultura",
     "zona": "Fora do Rio",
@@ -366,16 +345,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "kids_ok"
-    ],
-    "content": "~1h–1h30 subindo a serra (clima fresco, ótimo no calor). A cidade imperial: Museu Imperial (palácio de verão de D. Pedro II, com a coroa de verdade — você entra de pantufa pra não riscar o piso), Catedral (túmulo do imperador), Casa de Santos Dumont ('A Encantada', casa cheia de invenções) e o Palácio de Cristal. Centro histórico a pé. Petrópolis é polo cervejeiro (Bohemia nasceu ali): almoço com cerveja artesanal.",
-    "trap": "O Museu Imperial fecha segunda (e alguns outros também) — vá ter–dom e confira o dia. A estrada da serra tem neblina/chuva e trânsito de volta no domingo à tarde. A Casa de Santos Dumont é pequena e dá fila. Leve casaco — é bem mais frio que o Rio. Bairros turísticos (Quitandinha, Itaipava) ficam longe do centro: escolha o foco pra não correr.",
-    "fairPrice": "Museu Imperial ~R$30 (meia R$15). Casa de Santos Dumont ~R$15–25. Experiência na Cervejaria Bohemia ~R$50–90. Pedágio + combustível ida/volta ~R$80–150. Almoço no centro ~R$50–90 por pessoa."
+    "fit": ["kids_ok"],
+    "content": "",
+    "trap": "Don't treat Petrópolis as just a \"quick mountain trip\" — leaving from Rio, traffic can vary a lot, especially on holidays, weekends, and rainy days. Monday is a bad day for a cultural itinerary as many attractions may be closed. The Imperial Museum closes on Mondays, so best to go Tuesday through Sunday. Also don't try to fit historic center + Imperial Museum + Casa de Santos Dumont + Cathedral + Bohemia Brewery + Itaipava all in one day — it gets rushed and exhausting. On cold/rainy days, bring a jacket; mountain weather changes quickly.",
+    "fairPrice": "",
+    "extras": "Imperial Museum: R$10 full / R$5 half. Hours: ticket office 9:30am–5pm; Palace 10am–6pm, Tuesday to Sunday.\nCatedral São Pedro de Alcântara: free entry; visits usually 9am–4pm with Masses at specific times.\nCasa de Santos Dumont: typically R$10 full / R$5 half; open Tuesday to Sunday, 10am–5pm."
   },
   {
     "id": "EX1",
-    "title": "Tour Maracanã",
+    "title": "Maracanã Tour",
     "vibePrimary": "extra",
     "vibeSecondary": "cultura",
     "zona": "Tijuca",
@@ -383,16 +361,15 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "kids_ok"
-    ],
-    "content": "O templo do futebol. O tour leva à beira do gramado, aos vestiários com camisas de Flamengo e Fluminense, à Calçada da Fama (pegadas de Pelé e Zico), ao banco de reservas, à sala de imprensa e ao museu. É autoguiado/monitorado, ~50 min. Programa de torcedor: fazer o tour e, se der, voltar pra ver um jogo — estádio cheio não tem igual. Metrô estação Maracanã na porta.",
-    "trap": "COMPRE no site oficial (tourmaracana.com.br) — revendedor/agência cobra até 2–3x mais (vi R$240 onde o oficial é ~R$94). Em dia de jogo o tour é suspenso ou limitado: confira a agenda antes. A área em frente ao estádio NÃO é turística e esvazia — cuidado redobrado com o celular na chegada/saída; vá de metrô. Morador do Rio tem desconto carioca (leve RG). A foto profissional que oferecem é cara e de baixa resolução — recuse.",
-    "fairPrice": "Tour: inteira ~R$94, meia ~R$47 (estudante/idoso/criança); desconto carioca com RG. Horário ~9h–17h, última entrada 16h30. Metrô ~R$7. Ingresso de jogo varia muito (R$40 a R$200+)."
+    "fit": ["kids_ok"],
+    "content": "Tour of Maracanã Stadium (half day); tip: combine with a visit to Centro or Zona Norte",
+    "trap": "Don't go on a match day without checking first — the Maracanã Tour may have altered hours or reduced operation. Also don't buy from a tout or an inflated tour package unnecessarily — the official tour works for most people. The tour is great for football fans, history buffs, or stadium enthusiasts, but may disappoint those expecting a very long or highly interactive experience. Don't expect to walk on the pitch — access is typically to backstage areas, stands, dressing rooms/internal zones, and areas near the field depending on the day's operation.",
+    "fairPrice": "Official guided tour: R$94 full / R$47 half.\nCarioca full: R$60.\nCarioca half: R$30.\nBox office: generally open 8:30am–4:30pm.\nTour: daily operation, normally 9am–4pm, with changes on match days.",
+    "extras": "A half-day activity, good to combine with Quinta da Boa Vista, São Cristóvão, Feira de São Cristóvão, Centro, or even Tijuca depending on the profile. For tourists staying in Zona Sul, the journey to Maracanã can take longer than expected, so it's worth grouping with something in Zona Norte/Centro."
   },
   {
     "id": "EX2",
-    "title": "Jardim Botânico + Parque Lage",
+    "title": "Botanical Garden + Parque Lage",
     "vibePrimary": "extra",
     "vibeSecondary": "natureza",
     "zona": "Zona Sul",
@@ -400,11 +377,10 @@
     "essentialFirstTime": false,
     "weatherDependent": false,
     "dayConstraint": null,
-    "fit": [
-      "kids_ok"
-    ],
-    "content": "Dois verdes colados, manhã perfeita. Jardim Botânico (1808): a alameda das palmeiras imperiais gigantes, o orquidário, o lago das vitórias-régias, bromélias e micos/tucanos soltos. Ao lado, o Parque Lage (grátis), com o palacete, as grutas e a piscina-cenário com o Cristo emoldurado. Programa de local: JB cedo (fresco, vazio, pássaros ativos), café/brunch no Plage Café e a foto da piscina do Lage. Leva a manhã toda; ótimo com crianças (tem parquinho no JB).",
-    "trap": "O JB tem horário irregular: ter–dom 8h–17h, mas QUARTA só abre 11h e SEGUNDA 12h–17h — não vá de manhã na quarta/segunda achando que abre 8h. O Parque Lage é grátis, mas a foto da piscina/palacete agora exige AGENDAMENTO online gratuito. Estrangeiro paga bem mais caro no JB que residente — leve documento se for residente. Os micos roubam comida: bolsa fechada.",
-    "fairPrice": "Jardim Botânico: residente no Brasil ~R$40 (meia R$20; até 5 anos e +60 com isenção/meia); estrangeiro ~R$80. Parque Lage: grátis (agende o palacete). Brunch no Plage Café ~R$50–90."
+    "fit": ["kids_ok"],
+    "content": "Rio de Janeiro Botanical Garden + Parque Lage (same area); best in the morning or early afternoon",
+    "trap": "Don't leave this for late afternoon — both places are better with natural light and without rushing. The Botanical Garden is paid and has no regular visitor parking, so going by app/taxi is usually more practical. On Wednesdays, the Botanical Garden opens later, so be careful when planning a morning visit that day. Parque Lage is free, but the queue for photos at the mansion/café can be long, especially on weekends and holidays. Don't count on a quick breakfast/brunch at Parque Lage — there may be a wait and the experience is more about the setting than value for money.",
+    "fairPrice": "Botanical Garden: R$40 (Brazilian residents) / R$80 (foreign visitors)",
+    "extras": "Want nature and a contemplative walk? Botanical Garden first.\nWant the classic Cristo photo? Parque Lage.\nWant to avoid queues? Go on a weekday and early.\nWant to do it comfortably? Don't put Cristo, Lagoa, and Botanical Garden all in the same half-day."
   }
 ]

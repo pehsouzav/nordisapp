@@ -27,6 +27,7 @@ export interface Block {
   content: string;
   trap: string;
   fairPrice: string;
+  extras: string;
   _score?: number;
 }
 
@@ -72,23 +73,25 @@ export interface ItineraryResult {
   profile: Profile;
 }
 
-export type Lang = "pt" | "en";
+export type Lang = "pt" | "en" | "es";
 
 export interface RioAgora {
   month: string;
   pt: string[];
   en: string[];
+  es: string[];
 }
 
 export interface SafetyEntry {
   zona: string;
   pt: string;
   en: string;
+  es: string;
   nightNote: string;
 }
 
 export interface LogisticsEntry {
   blockId: string;
-  label: { pt: string; en: string };
+  label: { pt: string; en: string; es: string };
   url: string;
 }

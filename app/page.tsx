@@ -13,11 +13,12 @@ export default function Home() {
 
   useEffect(() => {
     const stored = localStorage.getItem("rio_lang") as Lang | null;
-    if (stored === "en" || stored === "pt") {
+    if (stored === "en" || stored === "pt" || stored === "es") {
       setLang(stored);
     } else {
       const nav = navigator.language?.toLowerCase() ?? "";
       if (nav.startsWith("en")) setLang("en");
+      else if (nav.startsWith("es")) setLang("es");
     }
   }, []);
 
@@ -34,7 +35,14 @@ export default function Home() {
         const mod = await import("@/data/blocks.en.json");
         blocks = mod.default as typeof blocksData;
       } catch {
-        // blocks.en.json not yet generated — fall back to PT
+        // fall back to PT
+      }
+    } else if (lang === "es") {
+      try {
+        const mod = await import("@/data/blocks.es.json");
+        blocks = mod.default as typeof blocksData;
+      } catch {
+        // fall back to PT
       }
     }
     const itinerary = buildItinerary(profile, blocks as Parameters<typeof buildItinerary>[1]);
