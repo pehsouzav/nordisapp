@@ -3,19 +3,30 @@
 import { useState } from "react";
 import type { Lang, ItineraryResult, Window } from "@/lib/types";
 import { t } from "@/lib/i18n";
-import LangToggle from "./LangToggle";
 import rioAgoraData from "@/data/rio_agora.json";
 import safetyData from "@/data/safety.json";
 import logisticsData from "@/data/logistics.json";
 
+const HOTMART_URL =
+  process.env.NEXT_PUBLIC_HOTMART_URL ?? "https://pay.hotmart.com/T104136786T";
+
 interface Props {
   result: ItineraryResult;
   lang: Lang;
-  onLangChange: (l: Lang) => void;
+  isPaid: boolean;
   onReset: () => void;
+  onSignOut?: () => void;
+  userEmail?: string;
 }
 
-export default function ItineraryView({ result, lang, onLangChange, onReset }: Props) {
+export default function ItineraryView({
+  result,
+  lang,
+  isPaid,
+  onReset,
+  onSignOut,
+  userEmail,
+}: Props) {
   const { schedule, antiFurada, segurancaZonas, logisticaBlockIds, budgetBannerKey, profile } = result;
 
   const [openLayers, setOpenLayers] = useState<Record<string, boolean>>({
@@ -42,7 +53,7 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
       ? (profile.days === 1 ? t(lang, "days_label_singular") : t(lang, "days_label_plural"))
       : t(lang, "days_label_plural");
     const paceKey = `pace_${profile.pace}` as Parameters<typeof t>[1];
-    const paceStr = t(lang, paceKey).split(" — ")[0].split(" — ")[0];
+    const paceStr = t(lang, paceKey).split(" — ")[0];
     return tpl
       .replace("{days}", daysNum)
       .replace("{days_label}", daysLbl)
@@ -61,6 +72,12 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
   const rioAgora = rioAgoraData;
   const rioItems = lang === "en" ? rioAgora.en : lang === "es" ? rioAgora.es : rioAgora.pt;
 
+  const paywallLabel = {
+    pt: { heading: `Veja seu roteiro completo de ${profile.days} dias`, hint: "Use o mesmo e-mail aqui e no checkout", btn: "Desbloquear agora →" },
+    en: { heading: `See your full ${profile.days}-day itinerary`, hint: "Use the same email here as on checkout", btn: "Unlock now →" },
+    es: { heading: `Ve tu itinerario completo de ${profile.days} días`, hint: "Usa el mismo correo aquí y en el checkout", btn: "Desbloquear ahora →" },
+  }[lang];
+
   return (
     <div className="min-h-screen pb-20" style={{ background: "var(--color-sand)" }}>
       {/* Header */}
@@ -69,9 +86,11 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
           <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--color-ocean)" }}>
             {t(lang, "brand")}
           </p>
+          {userEmail && (
+            <p className="text-xs text-gray-400 mt-0.5 truncate max-w-[140px]">{userEmail}</p>
+          )}
         </div>
-        <div className="flex items-center gap-3">
-          <LangToggle lang={lang} onChange={onLangChange} compact />
+        <div className="flex items-center gap-2">
           <button
             onClick={onReset}
             className="text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
@@ -85,6 +104,14 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
           >
             {t(lang, "print_btn")}
           </button>
+          {onSignOut && (
+            <button
+              onClick={onSignOut}
+              className="text-xs font-medium px-3 py-1.5 rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 transition-colors"
+            >
+              {lang === "pt" ? "Sair" : lang === "es" ? "Salir" : "Sign out"}
+            </button>
+          )}
         </div>
       </header>
 
@@ -102,164 +129,224 @@ export default function ItineraryView({ result, lang, onLangChange, onReset }: P
         </div>
 
         {/* Day cards */}
-        {schedule.map((day) => (
-          <div key={day.dayNumber} className="rounded-3xl bg-white shadow-sm overflow-hidden card">
-            <div className="px-5 py-3 font-bold text-white text-sm" style={{ background: "var(--color-night)" }}>
-              {t(lang, "day")} {day.dayNumber}
-            </div>
-            <div className="divide-y divide-gray-100">
-              {(["manhã", "tarde", "noite"] as Window[]).map((w) => {
-                if (!day.windows.includes(w) && !day.placed[w] && !day.freeWindows[w]) return null;
-                const placed = day.placed[w];
-                const isFree = day.freeWindows[w] || (!day.windows.includes(w));
-                const windowLabel = w === "manhã" ? t(lang, "morning") : w === "tarde" ? t(lang, "afternoon") : t(lang, "evening");
+        {schedule.map((day, dayIndex) => {
+          const isLocked = dayIndex > 0 && !isPaid;
 
-                if (isFree && !placed) {
+          if (isLocked) {
+            return (
+              <div key={day.dayNumber} className="relative rounded-3xl bg-white shadow-sm overflow-hidden card">
+                {/* Blurred preview */}
+                <div className="opacity-30 pointer-events-none select-none blur-sm px-5 py-4">
+                  <div className="font-bold text-sm text-white px-5 py-3 rounded-t-3xl mb-2" style={{ background: "var(--color-night)" }}>
+                    {t(lang, "day")} {day.dayNumber}
+                  </div>
+                  <div className="space-y-3 pt-2">
+                    <div className="h-4 bg-gray-200 rounded w-3/4" />
+                    <div className="h-3 bg-gray-100 rounded w-full" />
+                    <div className="h-3 bg-gray-100 rounded w-5/6" />
+                    <div className="h-4 bg-gray-200 rounded w-2/3 mt-4" />
+                    <div className="h-3 bg-gray-100 rounded w-full" />
+                  </div>
+                </div>
+
+                {/* Lock overlay */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 py-8 gap-3">
+                  <span className="text-3xl">🔒</span>
+                  <p className="font-bold text-lg" style={{ color: "var(--color-night)" }}>
+                    {paywallLabel.heading}
+                  </p>
+                  <p className="text-xs text-gray-500">{paywallLabel.hint}</p>
+                  <a
+                    href={HOTMART_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 rounded-2xl px-6 py-3 font-bold text-white text-sm transition-transform hover:scale-[1.02] active:scale-95"
+                    style={{ background: "var(--color-sunset)" }}
+                  >
+                    {paywallLabel.btn}
+                  </a>
+                </div>
+              </div>
+            );
+          }
+
+          return (
+            <div key={day.dayNumber} className="rounded-3xl bg-white shadow-sm overflow-hidden card">
+              <div className="px-5 py-3 font-bold text-white text-sm" style={{ background: "var(--color-night)" }}>
+                {t(lang, "day")} {day.dayNumber}
+              </div>
+              <div className="divide-y divide-gray-100">
+                {(["manhã", "tarde", "noite"] as Window[]).map((w) => {
+                  if (!day.windows.includes(w) && !day.placed[w] && !day.freeWindows[w]) return null;
+                  const placed = day.placed[w];
+                  const isFree = day.freeWindows[w] || (!day.windows.includes(w));
+                  const windowLabel = w === "manhã" ? t(lang, "morning") : w === "tarde" ? t(lang, "afternoon") : t(lang, "evening");
+
+                  if (isFree && !placed) {
+                    return (
+                      <div key={w} className="px-5 py-4 bg-gray-50">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">{windowLabel}</span>
+                        <p className="mt-1 text-sm text-gray-400 italic">{t(lang, "free_time")}</p>
+                      </div>
+                    );
+                  }
+
+                  if (!placed) return null;
+
+                  const block = placed.block;
+                  const flags = placed.flags ?? [];
+
+                  if (w === "tarde" && block.periodo === "dia inteiro") return null;
+                  const isDiaInteiro = block.periodo === "dia inteiro";
+
                   return (
-                    <div key={w} className="px-5 py-4 bg-gray-50">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">{windowLabel}</span>
-                      <p className="mt-1 text-sm text-gray-400 italic">{t(lang, "free_time")}</p>
+                    <div key={w} className="px-5 py-4">
+                      <div className="flex items-start gap-2">
+                        <div className="shrink-0">
+                          <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                            {isDiaInteiro
+                              ? `${t(lang, "morning")} + ${t(lang, "afternoon")}`
+                              : windowLabel}
+                          </span>
+                          <span className="ml-2 text-xs px-1.5 py-0.5 rounded-full text-white font-medium" style={{ background: vibeColor(block.vibePrimary) }}>
+                            {block.vibePrimary}
+                          </span>
+                        </div>
+                      </div>
+                      <h3 className="mt-1 font-bold text-base" style={{ color: "var(--color-night)" }}>
+                        {block.title}
+                      </h3>
+                      {block.content && (
+                        <p className="mt-1.5 text-sm text-gray-600 leading-relaxed">{block.content}</p>
+                      )}
+                      {block.extras && (
+                        <p className="mt-1.5 text-xs text-gray-500 leading-relaxed whitespace-pre-line">{block.extras}</p>
+                      )}
+                      {flags.map((flag, fi) => (
+                        <FlagBadge key={fi} flag={flag} lang={lang} />
+                      ))}
                     </div>
                   );
-                }
-
-                if (!placed) return null;
-
-                const block = placed.block;
-                const flags = placed.flags ?? [];
-
-                // Deduplicate: dia-inteiro block shows once even if placed in both manhã+tarde
-                if (w === "tarde" && block.periodo === "dia inteiro") {
-                  return null;
-                }
-
-                const isDiaInteiro = block.periodo === "dia inteiro";
-
-                return (
-                  <div key={w} className="px-5 py-4">
-                    <div className="flex items-start gap-2">
-                      <div className="shrink-0">
-                        <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-                          {isDiaInteiro
-                            ? `${t(lang, "morning")} + ${t(lang, "afternoon")}`
-                            : windowLabel}
-                        </span>
-                        <span className="ml-2 text-xs px-1.5 py-0.5 rounded-full text-white font-medium" style={{ background: vibeColor(block.vibePrimary) }}>
-                          {block.vibePrimary}
-                        </span>
-                      </div>
-                    </div>
-                    <h3 className="mt-1 font-bold text-base" style={{ color: "var(--color-night)" }}>
-                      {block.title}
-                    </h3>
-                    {block.content && (
-                      <p className="mt-1.5 text-sm text-gray-600 leading-relaxed">{block.content}</p>
-                    )}
-                    {block.extras && (
-                      <p className="mt-1.5 text-xs text-gray-500 leading-relaxed whitespace-pre-line">{block.extras}</p>
-                    )}
-                    {flags.map((flag, fi) => (
-                      <FlagBadge key={fi} flag={flag} lang={lang} />
-                    ))}
-                  </div>
-                );
-              })}
+                })}
+              </div>
             </div>
+          );
+        })}
+
+        {/* Paywall CTA if not paid and multi-day */}
+        {!isPaid && profile.days > 1 && (
+          <div className="rounded-3xl p-6 text-center space-y-3 no-print" style={{ background: "var(--color-ocean)" }}>
+            <p className="text-white font-bold text-lg">{paywallLabel.heading}</p>
+            <p className="text-white/70 text-xs">{paywallLabel.hint}</p>
+            <a
+              href={HOTMART_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-2xl px-8 py-3 font-bold text-sm transition-transform hover:scale-[1.02] active:scale-95"
+              style={{ background: "var(--color-sunset)", color: "white" }}
+            >
+              {paywallLabel.btn}
+            </a>
           </div>
-        ))}
-
-        {/* Layer: Anti-furada */}
-        {antiFurada.length > 0 && (
-          <CollapsibleLayer
-            icon={t(lang, "layer_traps_icon")}
-            title={t(lang, "layer_traps")}
-            isOpen={openLayers.traps}
-            onToggle={() => toggleLayer("traps")}
-          >
-            <div className="space-y-4">
-              {antiFurada.map((entry) => (
-                <div key={entry.blockId}>
-                  <p className="font-semibold text-sm" style={{ color: "var(--color-night)" }}>
-                    {entry.title}
-                  </p>
-                  {entry.trap && <p className="text-sm text-gray-600 mt-0.5">{entry.trap}</p>}
-                  {entry.fairPrice && (
-                    <p className="text-sm mt-1 font-medium" style={{ color: "var(--color-leaf)" }}>
-                      💰 {entry.fairPrice}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </CollapsibleLayer>
         )}
 
-        {/* Layer: Rio agora */}
-        <CollapsibleLayer
-          icon={t(lang, "layer_now_icon")}
-          title={`${t(lang, "layer_now")} (${rioAgora.month})`}
-          isOpen={openLayers.now}
-          onToggle={() => toggleLayer("now")}
-        >
-          <ul className="space-y-2">
-            {rioItems.map((item, i) => (
-              <li key={i} className="text-sm text-gray-700">{item}</li>
-            ))}
-          </ul>
-        </CollapsibleLayer>
+        {/* Layers — only shown for paid or single-day */}
+        {(isPaid || profile.days === 1) && (
+          <>
+            {/* Layer: Anti-furada */}
+            {antiFurada.length > 0 && (
+              <CollapsibleLayer
+                icon={t(lang, "layer_traps_icon")}
+                title={t(lang, "layer_traps")}
+                isOpen={openLayers.traps}
+                onToggle={() => toggleLayer("traps")}
+              >
+                <div className="space-y-4">
+                  {antiFurada.map((entry) => (
+                    <div key={entry.blockId}>
+                      <p className="font-semibold text-sm" style={{ color: "var(--color-night)" }}>
+                        {entry.title}
+                      </p>
+                      {entry.trap && <p className="text-sm text-gray-600 mt-0.5">{entry.trap}</p>}
+                      {entry.fairPrice && (
+                        <p className="text-sm mt-1 font-medium" style={{ color: "var(--color-leaf)" }}>
+                          💰 {entry.fairPrice}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </CollapsibleLayer>
+            )}
 
-        {/* Layer: Safety */}
-        <CollapsibleLayer
-          icon={t(lang, "layer_safety_icon")}
-          title={t(lang, "layer_safety")}
-          isOpen={openLayers.safety}
-          onToggle={() => toggleLayer("safety")}
-        >
-          <div className="space-y-4">
-            {safetyEntries.map((s) => (
-              <div key={s.zona}>
-                <p className="font-semibold text-sm" style={{ color: "var(--color-night)" }}>{s.zona}</p>
-                <p className="text-sm text-gray-600 mt-0.5">{lang === "en" ? s.en : lang === "es" ? s.es : s.pt}</p>
-                {s.nightNote && (
-                  <p className="text-sm mt-1 text-gray-500 italic">
-                    {t(lang, "layer_night_note")} {s.nightNote}
+            {/* Layer: Rio agora */}
+            <CollapsibleLayer
+              icon={t(lang, "layer_now_icon")}
+              title={`${t(lang, "layer_now")} (${rioAgora.month})`}
+              isOpen={openLayers.now}
+              onToggle={() => toggleLayer("now")}
+            >
+              <ul className="space-y-2">
+                {rioItems.map((item, i) => (
+                  <li key={i} className="text-sm text-gray-700">{item}</li>
+                ))}
+              </ul>
+            </CollapsibleLayer>
+
+            {/* Layer: Safety */}
+            <CollapsibleLayer
+              icon={t(lang, "layer_safety_icon")}
+              title={t(lang, "layer_safety")}
+              isOpen={openLayers.safety}
+              onToggle={() => toggleLayer("safety")}
+            >
+              <div className="space-y-4">
+                {safetyEntries.map((s) => (
+                  <div key={s.zona}>
+                    <p className="font-semibold text-sm" style={{ color: "var(--color-night)" }}>{s.zona}</p>
+                    <p className="text-sm text-gray-600 mt-0.5">{lang === "en" ? s.en : lang === "es" ? s.es : s.pt}</p>
+                    {s.nightNote && (
+                      <p className="text-sm mt-1 text-gray-500 italic">
+                        {t(lang, "layer_night_note")} {s.nightNote}
+                      </p>
+                    )}
+                  </div>
+                ))}
+                {safetyEntries.length === 0 && (
+                  <p className="text-sm text-gray-500">
+                    {lang === "pt" ? "Nenhuma zona específica identificada." : lang === "es" ? "Ninguna zona específica identificada." : "No specific zones identified."}
                   </p>
                 )}
               </div>
-            ))}
-            {safetyEntries.length === 0 && (
-              <p className="text-sm text-gray-500">
-                {lang === "pt" ? "Nenhuma zona específica identificada." : lang === "es" ? "Ninguna zona específica identificada." : "No specific zones identified."}
-              </p>
-            )}
-          </div>
-        </CollapsibleLayer>
+            </CollapsibleLayer>
 
-        {/* Layer: Logistics */}
-        {logisticsEntries.length > 0 && (
-          <CollapsibleLayer
-            icon={t(lang, "layer_logistics_icon")}
-            title={t(lang, "layer_logistics")}
-            isOpen={openLayers.logistics}
-            onToggle={() => toggleLayer("logistics")}
-          >
-            <div className="space-y-3">
-              {logisticsEntries.map((l) => (
-                <div key={l.blockId} className="flex items-center justify-between gap-3">
-                  <p className="text-sm text-gray-700">{lang === "en" ? l.label.en : lang === "es" ? l.label.es : l.label.pt}</p>
-                  <a
-                    href={l.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 text-xs font-medium px-3 py-1.5 rounded-full text-white transition-opacity hover:opacity-80"
-                    style={{ background: "var(--color-ocean)" }}
-                  >
-                    {lang === "pt" ? "Reservar →" : lang === "es" ? "Reservar →" : "Book →"}
-                  </a>
+            {/* Layer: Logistics */}
+            {logisticsEntries.length > 0 && (
+              <CollapsibleLayer
+                icon={t(lang, "layer_logistics_icon")}
+                title={t(lang, "layer_logistics")}
+                isOpen={openLayers.logistics}
+                onToggle={() => toggleLayer("logistics")}
+              >
+                <div className="space-y-3">
+                  {logisticsEntries.map((l) => (
+                    <div key={l.blockId} className="flex items-center justify-between gap-3">
+                      <p className="text-sm text-gray-700">{lang === "en" ? l.label.en : lang === "es" ? l.label.es : l.label.pt}</p>
+                      <a
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 text-xs font-medium px-3 py-1.5 rounded-full text-white transition-opacity hover:opacity-80"
+                        style={{ background: "var(--color-ocean)" }}
+                      >
+                        {lang === "pt" ? "Reservar →" : "Book →"}
+                      </a>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </CollapsibleLayer>
+              </CollapsibleLayer>
+            )}
+          </>
         )}
 
         {/* Bottom CTA */}
@@ -305,17 +392,9 @@ function FlagBadge({ flag, lang }: { flag: string; lang: Lang }) {
 }
 
 function CollapsibleLayer({
-  icon,
-  title,
-  isOpen,
-  onToggle,
-  children,
+  icon, title, isOpen, onToggle, children,
 }: {
-  icon: string;
-  title: string;
-  isOpen: boolean;
-  onToggle: () => void;
-  children: React.ReactNode;
+  icon: string; title: string; isOpen: boolean; onToggle: () => void; children: React.ReactNode;
 }) {
   return (
     <div className="rounded-3xl bg-white shadow-sm overflow-hidden card">
@@ -324,15 +403,11 @@ function CollapsibleLayer({
         className="w-full px-5 py-4 flex items-center justify-between font-bold text-left"
         aria-expanded={isOpen}
       >
-        <span style={{ color: "var(--color-night)" }}>
-          {icon} {title}
-        </span>
+        <span style={{ color: "var(--color-night)" }}>{icon} {title}</span>
         <span className="text-gray-400 text-lg">{isOpen ? "▲" : "▼"}</span>
       </button>
       {isOpen && (
-        <div className="px-5 pb-5 border-t border-gray-100 pt-4">
-          {children}
-        </div>
+        <div className="px-5 pb-5 border-t border-gray-100 pt-4">{children}</div>
       )}
     </div>
   );
@@ -340,13 +415,8 @@ function CollapsibleLayer({
 
 function vibeColor(vibe: string): string {
   const map: Record<string, string> = {
-    praia: "#1a6b8a",
-    cultura: "#7c3aed",
-    noturna: "#1a1f3c",
-    natureza: "#2d7a4f",
-    gastronomia: "#c2410c",
-    "bate-volta": "#0369a1",
-    extra: "#6b7280",
+    praia: "#1a6b8a", cultura: "#7c3aed", noturna: "#1a1f3c",
+    natureza: "#2d7a4f", gastronomia: "#c2410c", "bate-volta": "#0369a1", extra: "#6b7280",
   };
   return map[vibe] ?? "#6b7280";
 }

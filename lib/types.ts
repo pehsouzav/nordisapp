@@ -75,6 +75,12 @@ export interface ItineraryResult {
 
 export type Lang = "pt" | "en" | "es";
 
+export interface AppUser {
+  id: string;
+  email: string;
+  isPaid: boolean;
+}
+
 export interface RioAgora {
   month: string;
   pt: string[];
