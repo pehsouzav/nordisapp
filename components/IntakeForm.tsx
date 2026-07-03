@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { Lang, Profile, Vibe, Companion, Pace, Budget } from "@/lib/types";
+import type { Lang, Profile, Vibe, Companion, Pace, Budget, AppUser } from "@/lib/types";
 import { t } from "@/lib/i18n";
-import LangToggle from "./LangToggle";
 
 const TOTAL_STEPS = 7; // lang(0), days(1), first(2), vibes(3), companion(4), pace(5), budget+arrival(6)
 
@@ -11,11 +10,14 @@ interface Props {
   lang: Lang;
   onLangChange: (l: Lang) => void;
   onSubmit: (profile: Profile) => void;
+  user: AppUser | null;
+  onSignIn: () => void;
+  onSignOut: () => void;
 }
 
 const VIBES: Vibe[] = ["praia", "cultura", "noturna", "natureza", "gastronomia"];
 
-export default function IntakeForm({ lang, onLangChange, onSubmit }: Props) {
+export default function IntakeForm({ lang, onLangChange, onSubmit, user, onSignIn, onSignOut }: Props) {
   const [step, setStep] = useState(0);
   const [days, setDays] = useState<number | null>(null);
   const [firstTimer, setFirstTimer] = useState<boolean | null>(null);
@@ -91,7 +93,26 @@ export default function IntakeForm({ lang, onLangChange, onSubmit }: Props) {
             {t(lang, "brand")}
           </p>
         </div>
-        <LangToggle lang={lang} onChange={onLangChange} compact />
+        {user ? (
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-gray-500 hidden sm:inline">{user.email}</span>
+            <button
+              onClick={onSignOut}
+              className="text-xs font-medium"
+              style={{ color: "var(--color-ocean)" }}
+            >
+              {lang === "pt" ? "Sair" : lang === "es" ? "Salir" : "Sign out"}
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={onSignIn}
+            className="text-xs font-medium"
+            style={{ color: "var(--color-ocean)" }}
+          >
+            {lang === "pt" ? "Entrar" : lang === "es" ? "Iniciar sesión" : "Sign in"}
+          </button>
+        )}
       </header>
 
       {/* Progress bar */}

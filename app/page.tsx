@@ -141,7 +141,14 @@ export default function Home() {
           userEmail={user?.email}
         />
       ) : (
-        <IntakeForm lang={lang} onLangChange={handleLangChange} onSubmit={handleSubmit} />
+        <IntakeForm
+          lang={lang}
+          onLangChange={handleLangChange}
+          onSubmit={handleSubmit}
+          user={user}
+          onSignIn={() => setShowAuth(true)}
+          onSignOut={handleSignOut}
+        />
       )}
 
       {showAuth && (
