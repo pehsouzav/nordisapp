@@ -1,0 +1,50 @@
+[
+  {
+    "blockId": "NT1",
+    "label": {
+      "pt": "Compre o ingresso do Trem do Corcovado online",
+      "en": "Buy Corcovado Train tickets online"
+    },
+    "url": "https://www.tremdocorcovado.rio"
+  },
+  {
+    "blockId": "NT2",
+    "label": {
+      "pt": "Ingressos Pão de Açúcar — reserve com antecedência",
+      "en": "Sugar Loaf tickets — book in advance"
+    },
+    "url": "https://www.bondinho.com.br"
+  },
+  {
+    "blockId": "PR1",
+    "label": {
+      "pt": "Forte de Copacabana — ingresso online",
+      "en": "Forte de Copacabana — online ticket"
+    },
+    "url": "https://www.exercito.gov.br/forte-de-copacabana"
+  },
+  {
+    "blockId": "CH2",
+    "label": {
+      "pt": "Museu do Amanhã — reserve o horário online",
+      "en": "Museu do Amanhã — book a timed entry"
+    },
+    "url": "https://museudoamanha.org.br"
+  },
+  {
+    "blockId": "PR4",
+    "label": {
+      "pt": "Parque Lage — agende a visita ao palacete (grátis)",
+      "en": "Parque Lage — reserve your visit to the mansion (free)"
+    },
+    "url": "https://www.parquelage.art.br"
+  },
+  {
+    "blockId": "EX1",
+    "label": {
+      "pt": "Tour Maracanã — compre online",
+      "en": "Maracanã Tour — buy online"
+    },
+    "url": "https://www.maracana.com"
+  }
+]

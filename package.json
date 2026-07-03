@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "translate": "ts-node -r tsconfig-paths/register scripts/translate-blocks.ts",
+    "test:engine": "ts-node -r tsconfig-paths/register tests/engine.test.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.35.0",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"
@@ -18,6 +21,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5"
   }
 }

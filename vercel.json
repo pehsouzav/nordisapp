@@ -1,0 +1,3 @@
+{
+  "buildCommand": "npm run translate && npm run build"
+}
