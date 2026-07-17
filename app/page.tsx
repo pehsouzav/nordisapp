@@ -127,19 +127,17 @@ export default function Home() {
   async function handleAuthSuccess() {
     setShowAuth(false);
     setTimeout(async () => {
+      if (!pendingProfile) return;
+      // Load user meta if we have a session (may not exist yet if email confirmation is pending)
       try {
         const { data: { session } } = await supabase.auth.getSession();
-        if (session && pendingProfile) {
+        if (session) {
           await loadUserMeta(session.user.id, session.user.email ?? "");
-          await generateAndSave(pendingProfile);
-          setPendingProfile(null);
         }
-      } catch {
-        if (pendingProfile) {
-          await generateAndSave(pendingProfile);
-          setPendingProfile(null);
-        }
-      }
+      } catch {}
+      // Always generate — itinerary is built locally regardless of session state
+      await generateAndSave(pendingProfile);
+      setPendingProfile(null);
     }, 300);
   }
 
