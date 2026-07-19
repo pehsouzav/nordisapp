@@ -100,9 +100,19 @@ export default function AuthModal({ lang, onSuccess, onClose }: Props) {
     }
 
     if (mode === "signup") {
-      const { error: err } = await supabase.auth.signUp({ email, password });
+      const { data, error: err } = await supabase.auth.signUp({ email, password });
       if (err) {
         setError(err.message || c.error_generic);
+        setLoading(false);
+        return;
+      }
+      // Supabase returns an empty identities array when the email already exists
+      if (data.user && (data.user.identities?.length ?? 0) === 0) {
+        setError(
+          lang === "pt" ? "Este e-mail já tem uma conta. Clique em \"Já tem conta? Entrar\" abaixo." :
+          lang === "es" ? "Este correo ya tiene una cuenta. Haz clic en \"¿Ya tienes cuenta? Entrar\" abajo." :
+          "This email already has an account. Click \"Already have an account? Sign in\" below."
+        );
         setLoading(false);
         return;
       }
