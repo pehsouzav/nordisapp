@@ -29,11 +29,10 @@ export default function Home() {
 
   const loadUserMeta = useCallback(async (userId: string, email: string) => {
     try {
-      const { data } = await supabase
-        .from("user_meta")
-        .select("paid")
-        .eq("user_id", userId)
-        .maybeSingle();
+      const { data } = await Promise.race([
+        supabase.from("user_meta").select("paid").eq("user_id", userId).maybeSingle(),
+        new Promise<never>((_, reject) => setTimeout(() => reject(new Error("timeout")), 3000)),
+      ]);
       setUser({ id: userId, email, isPaid: data?.paid ?? false });
     } catch {
       setUser({ id: userId, email, isPaid: false });
@@ -42,13 +41,10 @@ export default function Home() {
 
   const loadSavedItinerary = useCallback(async (userId: string) => {
     try {
-      const { data } = await supabase
-        .from("itineraries")
-        .select("result")
-        .eq("user_id", userId)
-        .order("created_at", { ascending: false })
-        .limit(1)
-        .maybeSingle();
+      const { data } = await Promise.race([
+        supabase.from("itineraries").select("result").eq("user_id", userId).order("created_at", { ascending: false }).limit(1).maybeSingle(),
+        new Promise<never>((_, reject) => setTimeout(() => reject(new Error("timeout")), 3000)),
+      ]);
       if (data?.result) {
         setResult(data.result as ItineraryResult);
       }
@@ -111,7 +107,10 @@ export default function Home() {
 
   async function handleSubmit(profile: Profile) {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      const { data: { session } } = await Promise.race([
+        supabase.auth.getSession(),
+        new Promise<never>((_, reject) => setTimeout(() => reject(new Error("timeout")), 3000)),
+      ]);
       if (!session) {
         setPendingProfile(profile);
         setShowAuth(true);
@@ -119,7 +118,7 @@ export default function Home() {
       }
       await generateAndSave(profile);
     } catch {
-      // Supabase unavailable — generate without auth
+      // Supabase unavailable or timed out — generate without auth
       await generateAndSave(profile);
     }
   }
@@ -128,14 +127,15 @@ export default function Home() {
     setShowAuth(false);
     setTimeout(async () => {
       if (!pendingProfile) return;
-      // Load user meta if we have a session (may not exist yet if email confirmation is pending)
       try {
-        const { data: { session } } = await supabase.auth.getSession();
+        const { data: { session } } = await Promise.race([
+          supabase.auth.getSession(),
+          new Promise<never>((_, reject) => setTimeout(() => reject(new Error("timeout")), 3000)),
+        ]);
         if (session) {
           await loadUserMeta(session.user.id, session.user.email ?? "");
         }
       } catch {}
-      // Always generate — itinerary is built locally regardless of session state
       await generateAndSave(pendingProfile);
       setPendingProfile(null);
     }, 300);
