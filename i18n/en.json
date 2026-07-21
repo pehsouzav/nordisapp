@@ -46,8 +46,8 @@
   "budget_medio": "Mid-range",
   "budget_sem_limites": "No limits",
 
-  "q_arrival_label": "Arrival date? (optional)",
-  "q_arrival_hint": "We use this to schedule day-of-week-specific spots correctly.",
+  "q_arrival_label": "Arrival date?",
+  "q_arrival_hint": "We use this to avoid suggesting places closed on your specific days.",
   "skip": "Skip",
 
   "result_title": "Your itinerary is ready!",
@@ -84,5 +84,9 @@
   "select_max_two_vibes": "Maximum 2 vibes",
   "select_days": "Select number of days",
   "select_companion": "Select who you're going with",
-  "select_pace": "Select your pace"
+  "select_pace": "Select your pace",
+  "select_date": "Please select your arrival date",
+  "anti_furada_label": "Watch out",
+  "more_tips": "More tips",
+  "less_tips": "Less"
 }

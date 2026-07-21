@@ -46,8 +46,8 @@
   "budget_medio": "Medio",
   "budget_sem_limites": "Sin límite",
 
-  "q_arrival_label": "¿Fecha de llegada? (opcional)",
-  "q_arrival_hint": "La usamos para ajustar actividades específicas de día de la semana.",
+  "q_arrival_label": "¿Fecha de llegada?",
+  "q_arrival_hint": "La usamos para evitar sugerir lugares cerrados en tus días específicos.",
   "skip": "Omitir",
 
   "result_title": "¡Tu itinerario está listo!",
@@ -84,5 +84,9 @@
   "select_max_two_vibes": "Máximo 2 ambientes",
   "select_days": "Selecciona cuántos días",
   "select_companion": "Selecciona con quién vas",
-  "select_pace": "Selecciona el ritmo"
+  "select_pace": "Selecciona el ritmo",
+  "select_date": "Selecciona tu fecha de llegada",
+  "anti_furada_label": "Evita esto",
+  "more_tips": "Más consejos",
+  "less_tips": "Menos"
 }

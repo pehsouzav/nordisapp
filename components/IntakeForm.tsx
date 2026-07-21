@@ -63,6 +63,7 @@ export default function IntakeForm({ lang, onLangChange, onSubmit, user, onSignI
 
   function handleSubmit() {
     if (!days || firstTimer === null || vibes.length === 0 || !companion || !pace) return;
+    if (!arrivalDate) { setError(t(lang, "select_date")); return; }
     onSubmit({
       days,
       firstTimer,
@@ -297,7 +298,6 @@ export default function IntakeForm({ lang, onLangChange, onSubmit, user, onSignI
                 <div className="rounded-2xl border-2 border-gray-200 bg-white p-4 space-y-2">
                   <label className="block text-sm font-medium text-gray-700">
                     {t(lang, "q_arrival_label")}
-                    <span className="ml-1 text-xs text-gray-400">({t(lang, "skip")})</span>
                   </label>
                   <p className="text-xs text-gray-400">{t(lang, "q_arrival_hint")}</p>
                   <input

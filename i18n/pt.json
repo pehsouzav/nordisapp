@@ -46,8 +46,8 @@
   "budget_medio": "Médio",
   "budget_sem_limites": "Sem limites",
 
-  "q_arrival_label": "Data de chegada? (opcional)",
-  "q_arrival_hint": "Usamos para encaixar programas específicos de dia da semana.",
+  "q_arrival_label": "Data de chegada?",
+  "q_arrival_hint": "Usamos para não sugerir lugares fechados nos seus dias específicos.",
   "skip": "Pular",
 
   "result_title": "Seu roteiro está pronto!",
@@ -84,5 +84,9 @@
   "select_max_two_vibes": "Máximo 2 vibes",
   "select_days": "Selecione quantos dias",
   "select_companion": "Selecione com quem vai",
-  "select_pace": "Selecione o ritmo"
+  "select_pace": "Selecione o ritmo",
+  "select_date": "Selecione sua data de chegada",
+  "anti_furada_label": "Não caia em furada",
+  "more_tips": "Mais dicas",
+  "less_tips": "Menos"
 }
