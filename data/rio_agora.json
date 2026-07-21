@@ -1,24 +1,290 @@
 {
-  "month": "jun/2026",
-  "pt": [
-    "🌧️ Junho é mês frio e chuvoso — leve uma jaqueta leve e um guarda-chuva compacto.",
-    "🎭 Festival do Rio de Cinema: programação completa em festivaldecinemasp.com.br (datas a confirmar).",
-    "🏖️ Mar de inverno: ondas maiores e correntes mais fortes que o verão — respeite as bandeiras.",
-    "⚠️ Reforma da Rua XV de Novembro em andamento — desvios no Centro até agosto.",
-    "🎉 [PREENCHA: evento do mês, show, festa ou abertura de restaurante relevante]"
-  ],
-  "en": [
-    "🌧️ June is cool and rainy — bring a light jacket and compact umbrella.",
-    "🎭 Rio Film Festival: check festivaldecinemasp.com.br for the full lineup (dates TBC).",
-    "🏖️ Winter surf: stronger waves and currents than summer — heed the lifeguard flags.",
-    "⚠️ Rua XV de Novembro roadworks ongoing — diversions in Centro through August.",
-    "🎉 [FILL IN: this month's event, show, party or notable restaurant opening]"
-  ],
-  "es": [
-    "🌧️ Junio es frío y lluvioso — lleva una chaqueta ligera y un paraguas compacto.",
-    "🎭 Festival de Cine de Río: consulta festivaldecinemasp.com.br para la programación completa (fechas a confirmar).",
-    "🏖️ Mar de invierno: olas más grandes y corrientes más fuertes que en verano — respeta las banderas de los salvavidas.",
-    "⚠️ Obras en Rua XV de Novembro en curso — desvíos en el Centro hasta agosto.",
-    "🎉 [COMPLETAR: evento del mes, show, fiesta o apertura de restaurante relevante]"
-  ]
+  "1": {
+    "name": "janeiro",
+    "pt": [
+      "🌡️ Janeiro é o mês mais quente do ano — espere 35°C ou mais e chuvas fortes no fim da tarde. Saia cedo e evite trilhas após as 14h.",
+      "🎭 Os ensaios de bloco de Carnaval já começam em meados de janeiro — ótima chance de sentir a folia sem a multidão de fevereiro.",
+      "🏖️ Mar de verão: ondas moderadas e água morna (~25°C), mas correntes podem ser fortes — respeite as bandeiras dos guarda-vidas.",
+      "⚠️ Orla de Copacabana e Ipanema lotam nos finais de semana. Prefira chegar antes das 9h ou opte por Grumari e Prainha se quiser sossego.",
+      "🍽️ Janeiro é alta temporada — restaurantes populares têm fila. Reserve com antecedência ou vá no horário do almoço (12h–13h30) para entrar mais fácil."
+    ],
+    "en": [
+      "🌡️ January is the hottest month — expect 35°C+ and heavy afternoon thunderstorms. Head out early and avoid hikes after 2pm.",
+      "🎭 Carnival bloco rehearsals kick off in mid-January — a great chance to catch the energy before February's crowds arrive.",
+      "🏖️ Summer sea: moderate waves and warm water (~25°C), but currents can be strong — always respect lifeguard flags.",
+      "⚠️ Copacabana and Ipanema beaches are packed on weekends. Arrive before 9am, or head to Grumari or Prainha for more space.",
+      "🍽️ High season means restaurant queues. Book ahead or show up at lunch (noon–1:30pm) to walk in more easily."
+    ],
+    "es": [
+      "🌡️ Enero es el mes más caluroso — espera 35°C o más y fuertes tormentas por la tarde. Sal temprano y evita senderismo después de las 14h.",
+      "🎭 Los ensayos de blocos de Carnaval empiezan a mediados de enero — una oportunidad perfecta para sentir la fiesta sin la multitud de febrero.",
+      "🏖️ Mar de verano: olas moderadas y agua cálida (~25°C), pero las corrientes pueden ser fuertes — respeta siempre las banderas de los socorristas.",
+      "⚠️ Las playas de Copacabana e Ipanema se llenan los fines de semana. Llega antes de las 9h o ve a Grumari o Prainha para más tranquilidad.",
+      "🍽️ Alta temporada significa colas en los restaurantes. Reserva con anticipación o ve a almorzar (12h–13h30) para entrar más fácilmente."
+    ]
+  },
+  "2": {
+    "name": "fevereiro",
+    "pt": [
+      "🎉 Carnaval domina fevereiro — datas exatas variam a cada ano. A cidade para literalmente por 5 dias: hotéis lotam, transporte fica caótico, mas a energia é inesquecível.",
+      "🥁 Os maiores blocos (Cordão da Bola Preta, Monobloco) têm centenas de milhares de pessoas. Chegue 1h antes e guarde seus pertences com cuidado.",
+      "🌡️ Calor intenso durante o Carnaval — hidrate-se sempre e use protetor solar mesmo à noite (reflexo das luzes engana).",
+      "🚌 Metrô e ônibus têm horários especiais durante o Carnaval e ficam superlotados. Prefira caminhar ou usar aplicativos de transporte.",
+      "💡 Se não curtir multidão, evite a cidade no período do Carnaval. Se curtir, não perca — é uma das maiores festas do mundo."
+    ],
+    "en": [
+      "🎉 Carnival dominates February — exact dates shift each year. The city essentially stops for 5 days: hotels fill up, transport gets chaotic, but the energy is unforgettable.",
+      "🥁 The biggest blocos (Cordão da Bola Preta, Monobloco) draw hundreds of thousands. Arrive an hour early and guard your belongings carefully.",
+      "🌡️ Intense heat during Carnival — stay hydrated and use sunscreen even at night (stage lights are deceptive).",
+      "🚌 Metro and buses run special Carnival schedules and get extremely packed. Walking or ride apps work better.",
+      "💡 If you dislike crowds, avoid the city during Carnival week. If you love it, don't miss it — it's one of the world's greatest parties."
+    ],
+    "es": [
+      "🎉 El Carnaval domina febrero — las fechas exactas cambian cada año. La ciudad se detiene literalmente por 5 días: hoteles llenos, transporte caótico, pero la energía es inolvidable.",
+      "🥁 Los blocos más grandes (Cordão da Bola Preta, Monobloco) atraen cientos de miles de personas. Llega una hora antes y cuida bien tus pertenencias.",
+      "🌡️ Calor intenso durante el Carnaval — mantente hidratado/a y usa protector solar incluso de noche (las luces del escenario engañan).",
+      "🚌 El metro y los autobuses tienen horarios especiales en Carnaval y se llenan muchísimo. Caminar o usar apps de transporte funciona mejor.",
+      "💡 Si no te gustan las multitudes, evita la ciudad en la semana de Carnaval. Si te encantan, no te lo pierdas — es una de las mejores fiestas del mundo."
+    ]
+  },
+  "3": {
+    "name": "março",
+    "pt": [
+      "🎭 Março é pós-Carnaval — a cidade vai voltando ao ritmo normal na primeira quinzena. Menos turistas, preços caindo, ótimo custo-benefício.",
+      "🌡️ Ainda faz calor (28–32°C) mas as chuvas de verão estão diminuindo. Boa época para trilhas no período da manhã.",
+      "🏖️ Mar mais calmo que janeiro/fevereiro e praias menos lotadas — a melhor versão do verão carioca para quem quer tranquilidade.",
+      "🍽️ Com o fim da alta temporada, restaurantes ficam com mesas disponíveis e alguns lançam promoções de pós-Carnaval.",
+      "🎵 Shows e festivais voltam em março após a pausa do Carnaval — verifique a programação do Circo Voador e do Vivo Rio."
+    ],
+    "en": [
+      "🎭 March is post-Carnival — the city winds back to normal in the first half of the month. Fewer tourists, falling prices, great value.",
+      "🌡️ Still warm (28–32°C) but the summer rains are tapering off. Good time for morning hikes.",
+      "🏖️ Calmer sea than January/February and less crowded beaches — the best version of Rio summer for those wanting quiet.",
+      "🍽️ With high season ending, restaurants have open tables and some run post-Carnival specials.",
+      "🎵 Shows and festivals return in March after the Carnival pause — check the schedule at Circo Voador and Vivo Rio."
+    ],
+    "es": [
+      "🎭 Marzo es poscarnaval — la ciudad va volviendo a la normalidad en la primera quincena. Menos turistas, precios bajando, excelente relación calidad-precio.",
+      "🌡️ Aún hace calor (28–32°C) pero las lluvias de verano están disminuyendo. Buena época para senderismo por la mañana.",
+      "🏖️ Mar más tranquilo que enero/febrero y playas menos concurridas — la mejor versión del verano carioca para quien quiere tranquilidad.",
+      "🍽️ Con el fin de la temporada alta, los restaurantes tienen mesas disponibles y algunos ofrecen promociones poscarnaval.",
+      "🎵 Los conciertos y festivales regresan en marzo tras la pausa del Carnaval — consulta la programación del Circo Voador y el Vivo Rio."
+    ]
+  },
+  "4": {
+    "name": "abril",
+    "pt": [
+      "🍂 Abril é outono no Rio — temperaturas agradáveis entre 24–28°C, menos umidade e praticamente sem chuva. Um dos melhores meses para visitar.",
+      "🥾 Clima ideal para trilhas: Pedra da Gávea, Morro Dois Irmãos e Floresta da Tijuca estão no seu melhor. Ainda assim, saia cedo.",
+      "🏖️ Mar de outono: ondas boas para surf, água ainda morna (~23°C) e praias com movimento tranquilo nos dias de semana.",
+      "🎪 Abril tem menos eventos de grande porte, o que é ótimo: museus, atrações e restaurantes ficam acessíveis sem reserva.",
+      "💡 Semana Santa (data variável) pode agitar algumas regiões — verifique se cai em abril no seu ano de viagem."
+    ],
+    "en": [
+      "🍂 April is autumn in Rio — pleasant 24–28°C, lower humidity and almost no rain. One of the best months to visit.",
+      "🥾 Perfect hiking weather: Pedra da Gávea, Morro Dois Irmãos, and Tijuca Forest are at their best. Still, head out early.",
+      "🏖️ Autumn sea: good surf waves, water still warm (~23°C), and beaches pleasantly quiet on weekdays.",
+      "🎪 April has fewer big events, which is actually great: museums, attractions, and restaurants are accessible without booking.",
+      "💡 Easter (variable date) can liven up some areas — check if it falls in April in your travel year."
+    ],
+    "es": [
+      "🍂 Abril es otoño en Río — temperaturas agradables de 24–28°C, menos humedad y casi sin lluvia. Uno de los mejores meses para visitar.",
+      "🥾 Clima ideal para senderismo: Pedra da Gávea, Morro Dois Irmãos y el Bosque de Tijuca están en su mejor momento. Aun así, sal temprano.",
+      "🏖️ Mar de otoño: buenas olas para surf, agua aún cálida (~23°C) y playas tranquilas entre semana.",
+      "🎪 Abril tiene pocos grandes eventos, lo cual es ideal: museos, atracciones y restaurantes son accesibles sin reserva.",
+      "💡 Semana Santa (fecha variable) puede animar algunas zonas — verifica si cae en abril en tu año de viaje."
+    ]
+  },
+  "5": {
+    "name": "maio",
+    "pt": [
+      "🌤️ Maio é um dos meses mais agradáveis do Rio — 22–26°C, baixíssima umidade, céu azul quase todo dia e praticamente sem turistas.",
+      "🥾 Melhor época para trilhas longas: Pedra da Gávea, Pico da Tijuca e Morro Dois Irmãos sem fila e com temperatura ótima.",
+      "🏖️ Praia de inverno chegando: água mais fria (~21°C) mas sem ondas fortes. Copacabana e Ipanema ficam desertas de manhã.",
+      "🎭 Programação cultural intensa em maio — temporadas de teatro, shows no Vivo Rio e Circo Voador costumam ser boas.",
+      "💡 Restaurantes badalados ficam mais fáceis de reservar e alguns têm menus de temporada com pratos de outono."
+    ],
+    "en": [
+      "🌤️ May is one of Rio's most pleasant months — 22–26°C, very low humidity, blue skies almost every day, and almost no tourists.",
+      "🥾 Best time for long hikes: Pedra da Gávea, Pico da Tijuca, and Morro Dois Irmãos with no queues and great temperatures.",
+      "🏖️ Winter beach season arriving: cooler water (~21°C) but no strong waves. Copacabana and Ipanema are nearly empty in the mornings.",
+      "🎭 Strong cultural calendar in May — theatre seasons, shows at Vivo Rio and Circo Voador tend to be excellent.",
+      "💡 Popular restaurants are easier to book and some feature seasonal autumn tasting menus."
+    ],
+    "es": [
+      "🌤️ Mayo es uno de los meses más agradables de Río — 22–26°C, muy baja humedad, cielo azul casi todos los días y casi sin turistas.",
+      "🥾 La mejor época para senderismo largo: Pedra da Gávea, Pico da Tijuca y Morro Dois Irmãos sin colas y con temperatura excelente.",
+      "🏖️ Llegando la temporada de playa invernal: agua más fría (~21°C) pero sin olas fuertes. Copacabana e Ipanema están casi vacías por las mañanas.",
+      "🎭 Intensa programación cultural en mayo — temporadas de teatro y espectáculos en Vivo Rio y Circo Voador suelen ser excelentes.",
+      "💡 Los restaurantes populares son más fáciles de reservar y algunos ofrecen menús de degustación de otoño."
+    ]
+  },
+  "6": {
+    "name": "junho",
+    "pt": [
+      "🌧️ Junho é frio e chuvoso — leve uma jaqueta leve e um guarda-chuva compacto.",
+      "🎭 Festa Junina: arraiás e quadrilhas por toda a cidade, especialmente nos subúrbios e na Zona Norte. Vale a pena explorar.",
+      "🏖️ Mar de inverno: ondas maiores e correntes mais fortes que o verão — respeite as bandeiras dos guarda-vidas.",
+      "⚠️ Frio de manhã cedo (pode chegar a 15°C na madrugada) — leve uma camada extra se sair à noite.",
+      "🎉 A vida noturna da Lapa e de Botafogo não para mesmo no inverno — bares e casas de show mantêm programação intensa."
+    ],
+    "en": [
+      "🌧️ June is cool and rainy — bring a light jacket and compact umbrella.",
+      "🎭 Festa Junina: street parties with forró music and traditional food pop up all over the city, especially in the suburbs and Zona Norte.",
+      "🏖️ Winter surf: stronger waves and currents than summer — always respect lifeguard flags.",
+      "⚠️ Cold early mornings (can reach 15°C before dawn) — bring an extra layer if you're heading out at night.",
+      "🎉 Lapa and Botafogo nightlife stays strong even in winter — bars and music venues keep a packed schedule."
+    ],
+    "es": [
+      "🌧️ Junio es frío y lluvioso — lleva una chaqueta ligera y un paraguas compacto.",
+      "🎭 Festa Junina: fiestas callejeras con forró y comida tradicional por toda la ciudad, especialmente en los suburbios y la Zona Norte.",
+      "🏖️ Mar de invierno: olas más grandes y corrientes más fuertes que en verano — respeta siempre las banderas de los socorristas.",
+      "⚠️ Madrugadas frías (pueden llegar a 15°C antes del amanecer) — lleva una capa extra si sales de noche.",
+      "🎉 La vida nocturna de Lapa y Botafogo sigue fuerte incluso en invierno — bares y salas de música mantienen una intensa programación."
+    ]
+  },
+  "7": {
+    "name": "julho",
+    "pt": [
+      "🏫 Julho é férias escolares — a cidade fica movimentada apesar do frio de inverno. Hotéis e atrações populares enchem.",
+      "🏄 Melhor mês para surf: ondas constantes em Arpoador, Prainha e Barra. Não perca o pôr do sol no Arpoador.",
+      "🥾 Clima seco e fresco (18–22°C) é perfeito para trilhas — Floresta da Tijuca e Pedra Bonita estão incríveis em julho.",
+      "🎭 Festival de inverno em Petrópolis (na Serra, 1h30 do Rio) — opção de passeio de dia inteiro para quem curte temperatura ainda mais baixa.",
+      "💡 Janeiro e julho são as épocas mais caras do ano no Rio. Reserve hospedagem e restaurantes com antecedência."
+    ],
+    "en": [
+      "🏫 July is school holidays — the city gets busy despite the winter cold. Popular hotels and attractions fill up.",
+      "🏄 Best surf month: consistent waves at Arpoador, Prainha, and Barra da Tijuca. Don't miss sunset at Arpoador.",
+      "🥾 Dry and cool weather (18–22°C) is perfect for hiking — Tijuca Forest and Pedra Bonita are stunning in July.",
+      "🎭 Winter festival in Petrópolis (in the mountains, 1.5h from Rio) — a great full-day trip for even cooler temperatures.",
+      "💡 January and July are the most expensive times of year in Rio. Book accommodation and restaurants well in advance."
+    ],
+    "es": [
+      "🏫 Julio son las vacaciones escolares — la ciudad se anima a pesar del frío invernal. Hoteles y atracciones populares se llenan.",
+      "🏄 El mejor mes para el surf: olas constantes en Arpoador, Prainha y Barra da Tijuca. No te pierdas el atardecer en Arpoador.",
+      "🥾 El clima seco y fresco (18–22°C) es perfecto para senderismo — el Bosque de Tijuca y Pedra Bonita son impresionantes en julio.",
+      "🎭 Festival de invierno en Petrópolis (en la sierra, a 1h30 de Río) — una gran excursión de día completo para temperaturas aún más bajas.",
+      "💡 Enero y julio son las épocas más caras del año en Río. Reserva alojamiento y restaurantes con bastante anticipación."
+    ]
+  },
+  "8": {
+    "name": "agosto",
+    "pt": [
+      "☀️ Agosto é o mês mais seco do Rio — quase sem chuva, céu limpo e temperatura amena (18–23°C). Paraíso para quem quer explorar sem suor.",
+      "🥾 Melhor época para trilhas longas e exigentes: Pedra da Gávea, Morro do Corcovado pelo trilho e Pico da Tijuca estão no melhor de si.",
+      "🌿 Parque Lage fica lindo em agosto — flora exuberante, menos umidade e luz ótima para fotos pela manhã.",
+      "🏄 Boas ondas continuam em Arpoador e Prainha. A água está fria (~20°C) mas quem surfa não liga.",
+      "🎵 Agosto costuma ter boa programação de shows — rock, MPB e jazz no Vivo Rio, Circo Voador e Qualistage. Cheque a agenda."
+    ],
+    "en": [
+      "☀️ August is Rio's driest month — almost no rain, clear skies and mild temperatures (18–23°C). Perfect for exploring without breaking a sweat.",
+      "🥾 Best time for long demanding hikes: Pedra da Gávea, Corcovado via trail, and Pico da Tijuca are at their best.",
+      "🌿 Parque Lage is beautiful in August — lush flora, low humidity, and great morning light for photos.",
+      "🏄 Good waves continue at Arpoador and Prainha. Water is cold (~20°C) but surfers don't mind.",
+      "🎵 August usually has a strong concert lineup — rock, MPB, and jazz at Vivo Rio, Circo Voador, and Qualistage. Check the schedule."
+    ],
+    "es": [
+      "☀️ Agosto es el mes más seco de Río — casi sin lluvia, cielo despejado y temperatura suave (18–23°C). Perfecto para explorar sin sudar.",
+      "🥾 La mejor época para senderismo largo y exigente: Pedra da Gávea, Corcovado por el sendero y Pico da Tijuca están en su mejor momento.",
+      "🌿 El Parque Lage es hermoso en agosto — flora exuberante, baja humedad y excelente luz matutina para fotos.",
+      "🏄 Las buenas olas continúan en Arpoador y Prainha. El agua está fría (~20°C) pero a los surfistas no les importa.",
+      "🎵 Agosto suele tener buena programación de conciertos — rock, MPB y jazz en Vivo Rio, Circo Voador y Qualistage. Consulta la agenda."
+    ]
+  },
+  "9": {
+    "name": "setembro",
+    "pt": [
+      "🌸 Setembro é a primavera carioca — o clima começa a esquentar (23–27°C), as flores desabrocham e a cidade sai do torpor do inverno.",
+      "🐳 Temporada de avistamento de baleias Jubarte acaba em setembro — Arraial do Cabo (2h do Rio) é ótima opção de passeio.",
+      "🏖️ Praias voltam a animar com o calor nascente, mas ainda sem a lotação do verão. Momento ideal de praia.",
+      "🎭 Programação cultural de primavera aquece: festivais literários, mostras de cinema e feiras gastronômicas aparecem em setembro.",
+      "💡 Setembro tem excelente custo-benefício: clima ótimo, menos turistas que o verão e preços ainda baixos."
+    ],
+    "en": [
+      "🌸 September is Rio's spring — temperatures start climbing (23–27°C), flowers bloom, and the city shakes off the winter.",
+      "🐳 Humpback whale-watching season ends in September — Arraial do Cabo (2h from Rio) is a great day-trip option.",
+      "🏖️ Beaches come alive as the heat builds, but without summer crowds. Ideal beach conditions.",
+      "🎭 Spring cultural calendar warms up: literary festivals, film screenings, and food fairs pop up in September.",
+      "💡 September offers excellent value: great weather, fewer tourists than summer, and prices still low."
+    ],
+    "es": [
+      "🌸 Septiembre es la primavera carioca — las temperaturas empiezan a subir (23–27°C), florecen las flores y la ciudad se sacude el invierno.",
+      "🐳 La temporada de avistamiento de ballenas jorobadas termina en septiembre — Arraial do Cabo (a 2h de Río) es una excelente excursión de día.",
+      "🏖️ Las playas se animan con el calor emergente, pero sin la masificación del verano. Condiciones ideales para la playa.",
+      "🎭 La programación cultural de primavera se activa: festivales literarios, proyecciones de cine y ferias gastronómicas en septiembre.",
+      "💡 Septiembre ofrece una excelente relación calidad-precio: buen clima, menos turistas que en verano y precios todavía bajos."
+    ]
+  },
+  "10": {
+    "name": "outubro",
+    "pt": [
+      "🌡️ Outubro esquenta rápido — 26–30°C e umidade crescente. Chuvas de primavera voltam, geralmente à tarde. Planeje atividades para a manhã.",
+      "🌊 Mar morno voltando (~23°C) e praias ficando mais movimentadas nos fins de semana. Ótimo para nadar.",
+      "🍽️ Temporada gastronômica forte em outubro — restaurantes novos abrem, menus de primavera surgem e a cena de bar está agitada.",
+      "🎸 Rock in Rio acontece em outubro (anos ímpares) — um dos maiores festivais do mundo, com shows até de madrugada.",
+      "💡 Outubro é um ótimo equilíbrio: já faz calor mas o verão ainda não chegou. Uma das melhores janelas para visitar."
+    ],
+    "en": [
+      "🌡️ October heats up fast — 26–30°C with rising humidity. Spring rains return, usually in the afternoon. Plan activities for mornings.",
+      "🌊 The sea warms back up (~23°C) and beaches get busier on weekends. Great for swimming.",
+      "🍽️ Strong food season in October — new restaurants open, spring menus launch, and the bar scene is buzzing.",
+      "🎸 Rock in Rio happens in October (odd years) — one of the world's biggest festivals, with shows running until dawn.",
+      "💡 October strikes a great balance: warm but not yet full summer. One of the best windows to visit."
+    ],
+    "es": [
+      "🌡️ Octubre se calienta rápido — 26–30°C con humedad creciente. Las lluvias de primavera regresan, generalmente por la tarde. Planifica actividades por la mañana.",
+      "🌊 El mar se calienta de nuevo (~23°C) y las playas se animan los fines de semana. Ideal para nadar.",
+      "🍽️ Fuerte temporada gastronómica en octubre — abren nuevos restaurantes, surgen menús de primavera y la escena de bares está animada.",
+      "🎸 Rock in Rio se celebra en octubre (años impares) — uno de los festivales más grandes del mundo, con conciertos hasta el amanecer.",
+      "💡 Octubre ofrece un equilibrio perfecto: ya hace calor pero el verano aún no ha llegado. Una de las mejores ventanas para visitar."
+    ]
+  },
+  "11": {
+    "name": "novembro",
+    "pt": [
+      "⛈️ Novembro é quente e chuvoso — 27–31°C com temporais intensos à tarde. Carregue sempre um guarda-chuva compacto.",
+      "🏖️ Mar aquecido (~25°C) e praias lotadas nos fins de semana. Prefira dias de semana para mais sossego.",
+      "🌩️ Chuvas podem causar alagamentos pontuais em Copacabana e Lapa. Verifique o alerta de chuva antes de sair.",
+      "🎶 Novembro tem movimentação cultural forte: shows de fim de ano começam a aparecer na agenda do Rio.",
+      "💡 Hotéis começam a subir de preço pré-dezembro. Reserve com antecedência se viajar no final do mês."
+    ],
+    "en": [
+      "⛈️ November is hot and rainy — 27–31°C with intense afternoon storms. Always carry a compact umbrella.",
+      "🏖️ Warm sea (~25°C) and beaches packed on weekends. Aim for weekdays for more breathing room.",
+      "🌩️ Rain can cause flash flooding in Copacabana and Lapa. Check rain alerts before heading out.",
+      "🎶 Strong cultural calendar in November: year-end shows start appearing on Rio's event schedule.",
+      "💡 Hotels begin raising prices ahead of December. Book early if travelling late in the month."
+    ],
+    "es": [
+      "⛈️ Noviembre es caluroso y lluvioso — 27–31°C con intensas tormentas por la tarde. Lleva siempre un paraguas compacto.",
+      "🏖️ Mar cálido (~25°C) y playas llenas los fines de semana. Opta por los días de semana para más tranquilidad.",
+      "🌩️ Las lluvias pueden causar inundaciones puntuales en Copacabana y Lapa. Consulta las alertas de lluvia antes de salir.",
+      "🎶 Intensa agenda cultural en noviembre: los espectáculos de fin de año empiezan a aparecer en la programación de Río.",
+      "💡 Los hoteles comienzan a subir de precio antes de diciembre. Reserva con anticipación si viajas a finales de mes."
+    ]
+  },
+  "12": {
+    "name": "dezembro",
+    "pt": [
+      "🎆 Réveillon de Copacabana (31/12) reúne mais de 2 milhões de pessoas na orla — o maior show de fogos do mundo dura 12 minutos. Acomodações na orla esgotam meses antes.",
+      "🌡️ Calor intenso de verão (30–35°C) com chuvas fortes à tarde. A regra é: manhã na rua, tarde descansando ou na praia.",
+      "🎄 Natal no Rio é tropical — árvore gigante na Lagoa Rodrigo de Freitas é um dos cartões-postais de dezembro.",
+      "⚠️ Dezembro é o mês mais caro do ano. Hotéis, restaurantes e transporte sobem bastante de preço na segunda quinzena.",
+      "🏖️ Mar de verão com água morna (~26°C) e grande movimento nas praias. Chegue cedo para garantir lugar."
+    ],
+    "en": [
+      "🎆 New Year's Eve on Copacabana beach (Dec 31) draws over 2 million people — the world's biggest fireworks show lasts 12 minutes. Beachfront hotels sell out months in advance.",
+      "🌡️ Full summer heat (30–35°C) with heavy afternoon rains. The rule is: mornings out, afternoons resting or at the beach.",
+      "🎄 Christmas in Rio is tropical — the giant floating Christmas tree on Lagoa Rodrigo de Freitas is one of December's landmarks.",
+      "⚠️ December is the most expensive month. Hotels, restaurants, and transport prices spike sharply in the second half.",
+      "🏖️ Warm summer sea (~26°C) and very busy beaches. Arrive early to claim your spot."
+    ],
+    "es": [
+      "🎆 La Nochevieja en la playa de Copacabana (31/12) reúne a más de 2 millones de personas — el mayor espectáculo de fuegos artificiales del mundo dura 12 minutos. Los hoteles frente al mar se agotan meses antes.",
+      "🌡️ Pleno calor de verano (30–35°C) con fuertes lluvias por la tarde. La regla es: mañanas fuera, tardes descansando o en la playa.",
+      "🎄 La Navidad en Río es tropical — el enorme árbol flotante en la Lagoa Rodrigo de Freitas es uno de los iconos de diciembre.",
+      "⚠️ Diciembre es el mes más caro del año. Hoteles, restaurantes y transporte suben bastante de precio en la segunda quincena.",
+      "🏖️ Mar cálido de verano (~26°C) y playas muy concurridas. Llega temprano para conseguir tu lugar."
+    ]
+  }
 }

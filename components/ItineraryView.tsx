@@ -10,6 +10,10 @@ import logisticsData from "@/data/logistics.json";
 const HOTMART_URL =
   process.env.NEXT_PUBLIC_HOTMART_URL ?? "https://pay.hotmart.com/T104136786T";
 
+// Type for the new multi-month rio_agora.json structure
+type RioAgoraMonth = { name: string; pt: string[]; en: string[]; es: string[] };
+const rioAgoraMonths = rioAgoraData as Record<string, RioAgoraMonth>;
+
 interface Props {
   result: ItineraryResult;
   lang: Lang;
@@ -27,12 +31,11 @@ export default function ItineraryView({
   onSignOut,
   userEmail,
 }: Props) {
-  const { schedule, antiFurada, segurancaZonas, logisticaBlockIds, budgetBannerKey, profile } = result;
+  const { schedule, antiFurada, logisticaBlockIds, budgetBannerKey, profile } = result;
 
   const [activeDay, setActiveDay] = useState(1);
   const [openLayers, setOpenLayers] = useState<Record<string, boolean>>({
     now: false,
-    safety: false,
   });
 
   function toggleLayer(key: string) {
@@ -54,10 +57,38 @@ export default function ItineraryView({
     [logisticsEntries]
   );
 
-  const safetyEntries = useMemo(
-    () => safetyData.filter((s) => segurancaZonas.includes(s.zona)),
-    [segurancaZonas]
+  const safetyMap = useMemo(
+    () => Object.fromEntries(safetyData.map((s) => [s.zona, s])),
+    []
   );
+
+  // For each day view: compute which block IDs are the FIRST occurrence of their zone
+  const activeSchedule = schedule.find((d) => d.dayNumber === activeDay);
+
+  const firstZoneBlockIds = useMemo(() => {
+    if (!activeSchedule) return new Set<string>();
+    const seen = new Set<string>();
+    const result = new Set<string>();
+    for (const w of ["manhã", "tarde", "noite"] as Window[]) {
+      const placed = activeSchedule.placed[w];
+      if (!placed) continue;
+      const zona = placed.block.zona;
+      if (!seen.has(zona)) {
+        seen.add(zona);
+        result.add(placed.block.id);
+      }
+    }
+    return result;
+  }, [activeSchedule]);
+
+  // Rio Now — pick the right month from arrival date
+  const travelMonth = profile.arrivalDate
+    ? new Date(profile.arrivalDate + "T12:00:00").getMonth() + 1
+    : new Date().getMonth() + 1;
+  const rioAgoraEntry = rioAgoraMonths[String(travelMonth)];
+  const rioItems =
+    lang === "en" ? rioAgoraEntry.en : lang === "es" ? rioAgoraEntry.es : rioAgoraEntry.pt;
+  const rioMonthName = rioAgoraEntry.name;
 
   const vibeLabel = (v: string | null) => {
     if (!v) return "";
@@ -88,9 +119,6 @@ export default function ItineraryView({
   const budgetKey = `budget_banner_${budgetBannerKey}` as Parameters<typeof t>[1];
   const budgetBanner = t(lang, budgetKey);
 
-  const rioAgora = rioAgoraData;
-  const rioItems = lang === "en" ? rioAgora.en : lang === "es" ? rioAgora.es : rioAgora.pt;
-
   const paywallLabel = {
     pt: {
       heading: `Veja seu roteiro completo de ${profile.days} dias`,
@@ -110,8 +138,10 @@ export default function ItineraryView({
   }[lang];
 
   const activeDayIndex = activeDay - 1;
-  const activeSchedule = schedule.find((d) => d.dayNumber === activeDay);
   const isLocked = activeDayIndex > 0 && !isPaid;
+
+  const safetyLabel =
+    lang === "pt" ? "Segurança" : lang === "es" ? "Seguridad" : "Safety";
 
   return (
     <div className="min-h-screen pb-20" style={{ background: "var(--color-sand)" }}>
@@ -267,6 +297,8 @@ export default function ItineraryView({
 
                   const antiFuradaEntry = antiFuradaMap[block.id];
                   const logisticsEntry = logisticsMap[block.id];
+                  const safetyEntry = safetyMap[block.zona];
+                  const showSafety = !!safetyEntry && firstZoneBlockIds.has(block.id);
 
                   return (
                     <div key={w} className="px-5 py-4">
@@ -331,16 +363,47 @@ export default function ItineraryView({
                           </a>
                         </div>
                       )}
+                      {/* Anti-furada — collapsible */}
                       {antiFuradaEntry && (
-                        <div className="mt-3 rounded-xl p-3 bg-amber-50 border border-amber-100 space-y-1">
-                          <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide">
-                            {t(lang, "anti_furada_label")}
-                          </p>
-                          <p className="text-sm text-gray-700">{antiFuradaEntry.trap}</p>
-                          {antiFuradaEntry.fairPrice && (
-                            <p className="text-xs font-medium" style={{ color: "var(--color-leaf)" }}>
-                              {antiFuradaEntry.fairPrice}
-                            </p>
+                        <div className="mt-3">
+                          <button
+                            onClick={() => toggleLayer(`furada_${block.id}`)}
+                            className="text-xs font-medium text-amber-600 hover:text-amber-800 transition-colors"
+                          >
+                            ⚠️ {t(lang, "anti_furada_label")}
+                          </button>
+                          {openLayers[`furada_${block.id}`] && (
+                            <div className="mt-2 rounded-xl p-3 bg-amber-50 border border-amber-100 space-y-1">
+                              <p className="text-sm text-gray-700">{antiFuradaEntry.trap}</p>
+                              {antiFuradaEntry.fairPrice && (
+                                <p className="text-xs font-medium" style={{ color: "var(--color-leaf)" }}>
+                                  {antiFuradaEntry.fairPrice}
+                                </p>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                      {/* Safety — inline, collapsible, first occurrence of zone only */}
+                      {showSafety && (
+                        <div className="mt-3">
+                          <button
+                            onClick={() => toggleLayer(`safety_${block.id}`)}
+                            className="text-xs font-medium text-gray-400 hover:text-gray-600 transition-colors"
+                          >
+                            🛡️ {safetyLabel} — {block.zona}
+                          </button>
+                          {openLayers[`safety_${block.id}`] && (
+                            <div className="mt-2 rounded-xl p-3 bg-blue-50 border border-blue-100 space-y-1">
+                              <p className="text-sm text-gray-700">
+                                {lang === "en" ? safetyEntry.en : lang === "es" ? safetyEntry.es : safetyEntry.pt}
+                              </p>
+                              {safetyEntry.nightNote && (
+                                <p className="text-xs text-gray-500 italic">
+                                  {t(lang, "layer_night_note")} {safetyEntry.nightNote}
+                                </p>
+                              )}
+                            </div>
                           )}
                         </div>
                       )}
@@ -372,58 +435,22 @@ export default function ItineraryView({
           </div>
         )}
 
-        {/* Info layers — only shown for paid or single-day */}
+        {/* Rio Now — only for paid or single-day */}
         {(isPaid || profile.days === 1) && (
-          <>
-            <CollapsibleLayer
-              icon={t(lang, "layer_now_icon")}
-              title={`${t(lang, "layer_now")} (${rioAgora.month})`}
-              isOpen={openLayers.now}
-              onToggle={() => toggleLayer("now")}
-            >
-              <ul className="space-y-2">
-                {rioItems.map((item, i) => (
-                  <li key={i} className="text-sm text-gray-700">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CollapsibleLayer>
-
-            <CollapsibleLayer
-              icon={t(lang, "layer_safety_icon")}
-              title={t(lang, "layer_safety")}
-              isOpen={openLayers.safety}
-              onToggle={() => toggleLayer("safety")}
-            >
-              <div className="space-y-4">
-                {safetyEntries.map((s) => (
-                  <div key={s.zona}>
-                    <p className="font-semibold text-sm" style={{ color: "var(--color-night)" }}>
-                      {s.zona}
-                    </p>
-                    <p className="text-sm text-gray-600 mt-0.5">
-                      {lang === "en" ? s.en : lang === "es" ? s.es : s.pt}
-                    </p>
-                    {s.nightNote && (
-                      <p className="text-sm mt-1 text-gray-500 italic">
-                        {t(lang, "layer_night_note")} {s.nightNote}
-                      </p>
-                    )}
-                  </div>
-                ))}
-                {safetyEntries.length === 0 && (
-                  <p className="text-sm text-gray-500">
-                    {lang === "pt"
-                      ? "Nenhuma zona específica identificada."
-                      : lang === "es"
-                      ? "Ninguna zona específica identificada."
-                      : "No specific zones identified."}
-                  </p>
-                )}
-              </div>
-            </CollapsibleLayer>
-          </>
+          <CollapsibleLayer
+            icon={t(lang, "layer_now_icon")}
+            title={`${t(lang, "layer_now")} (${rioMonthName})`}
+            isOpen={openLayers.now}
+            onToggle={() => toggleLayer("now")}
+          >
+            <ul className="space-y-2">
+              {rioItems.map((item, i) => (
+                <li key={i} className="text-sm text-gray-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </CollapsibleLayer>
         )}
 
         {/* Bottom CTA */}
