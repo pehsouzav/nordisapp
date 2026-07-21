@@ -118,8 +118,13 @@ export default function Home() {
       }
       await generateAndSave(profile);
     } catch {
-      // Supabase unavailable or timed out — generate without auth
-      await generateAndSave(profile);
+      // Supabase unavailable or timed out — fall back to local user state
+      if (user) {
+        await generateAndSave(profile);
+      } else {
+        setPendingProfile(profile);
+        setShowAuth(true);
+      }
     }
   }
 
