@@ -363,14 +363,17 @@ export default function ItineraryView({
                           </a>
                         </div>
                       )}
-                      {/* Anti-furada — collapsible */}
+                      {/* Anti-furada — collapsible chip */}
                       {antiFuradaEntry && (
                         <div className="mt-3">
                           <button
                             onClick={() => toggleLayer(`furada_${block.id}`)}
-                            className="text-xs font-medium text-amber-600 hover:text-amber-800 transition-colors"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100"
                           >
                             ⚠️ {t(lang, "anti_furada_label")}
+                            <span className="text-amber-400 text-[10px]">
+                              {openLayers[`furada_${block.id}`] ? "▲" : "▼"}
+                            </span>
                           </button>
                           {openLayers[`furada_${block.id}`] && (
                             <div className="mt-2 rounded-xl p-3 bg-amber-50 border border-amber-100 space-y-1">
@@ -384,14 +387,17 @@ export default function ItineraryView({
                           )}
                         </div>
                       )}
-                      {/* Safety — inline, collapsible, first occurrence of zone only */}
+                      {/* Safety — inline, collapsible chip, first occurrence of zone only */}
                       {showSafety && (
-                        <div className="mt-3">
+                        <div className="mt-2">
                           <button
                             onClick={() => toggleLayer(`safety_${block.id}`)}
-                            className="text-xs font-medium text-gray-400 hover:text-gray-600 transition-colors"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100"
                           >
                             🛡️ {safetyLabel} — {block.zona}
+                            <span className="text-blue-400 text-[10px]">
+                              {openLayers[`safety_${block.id}`] ? "▲" : "▼"}
+                            </span>
                           </button>
                           {openLayers[`safety_${block.id}`] && (
                             <div className="mt-2 rounded-xl p-3 bg-blue-50 border border-blue-100 space-y-1">
