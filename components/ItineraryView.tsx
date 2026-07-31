@@ -8,7 +8,7 @@ import safetyData from "@/data/safety.json";
 import logisticsData from "@/data/logistics.json";
 
 const HOTMART_URL =
-  process.env.NEXT_PUBLIC_HOTMART_URL ?? "https://pay.hotmart.com/T104136786T";
+  process.env.NEXT_PUBLIC_HOTMART_URL ?? "https://pay.hotmart.com/T104136786T?utm_source=adshooka&utm_medium=quiz";
 
 // Type for the new multi-month rio_agora.json structure
 type RioAgoraMonth = { name: string; pt: string[]; en: string[]; es: string[] };
