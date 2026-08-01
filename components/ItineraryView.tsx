@@ -182,7 +182,7 @@ export default function ItineraryView({
 
       <div className="max-w-2xl mx-auto px-4 pt-8 space-y-6">
         {/* Hero */}
-        <div className="rounded-3xl p-6 text-white" style={{ background: "var(--color-ocean)" }}>
+        <div className="rounded-3xl p-6 text-white print-hero" style={{ background: "var(--color-ocean)" }}>
           <p className="text-xs font-semibold uppercase tracking-widest opacity-70 mb-1">
             {t(lang, "tagline")}
           </p>
@@ -211,7 +211,8 @@ export default function ItineraryView({
           ))}
         </div>
 
-        {/* Active day card */}
+        {/* Active day card — web only (print-only section below renders all days) */}
+        <div className="no-print">
         {activeSchedule && (
           isLocked ? (
             <div className="relative rounded-3xl bg-white shadow-sm overflow-hidden card">
@@ -420,6 +421,7 @@ export default function ItineraryView({
             </div>
           )
         )}
+        </div>
 
         {/* Paywall CTA */}
         {!isPaid && profile.days > 1 && (
@@ -458,6 +460,124 @@ export default function ItineraryView({
             </ul>
           </CollapsibleLayer>
         )}
+
+        {/* Print-only: all days fully expanded */}
+        <div className="print-only space-y-6">
+          {schedule.map((day, dayIdx) => {
+            // Compute first-zone block IDs per day (for safety dedup)
+            const seenZones = new Set<string>();
+            const firstZoneIds = new Set<string>();
+            for (const w of ["manhã", "tarde", "noite"] as Window[]) {
+              const placed = day.placed[w];
+              if (placed) {
+                const { zona } = placed.block;
+                if (!seenZones.has(zona)) { seenZones.add(zona); firstZoneIds.add(placed.block.id); }
+              }
+            }
+            return (
+              <div key={day.dayNumber} className={dayIdx > 0 ? "print-page-break" : ""}>
+                <div className="rounded-3xl bg-white overflow-hidden">
+                  <div className="px-5 py-3 print-day-header">
+                    <span className="text-sm font-bold">{t(lang, "day")} {day.dayNumber}</span>
+                    {profile.arrivalDate && (
+                      <span className="block text-xs font-normal opacity-70 mt-0.5 capitalize">
+                        {formatDayDate(profile.arrivalDate, dayIdx, lang)}
+                      </span>
+                    )}
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    {(["manhã", "tarde", "noite"] as Window[]).map((w) => {
+                      if (!day.windows.includes(w) && !day.placed[w] && !day.freeWindows[w]) return null;
+                      const placed = day.placed[w];
+                      const isFree = day.freeWindows[w] || !day.windows.includes(w);
+                      const windowLabel = w === "manhã" ? t(lang, "morning") : w === "tarde" ? t(lang, "afternoon") : t(lang, "evening");
+
+                      if (isFree && !placed) {
+                        return (
+                          <div key={w} className="px-5 py-4 bg-gray-50">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">{windowLabel}</span>
+                            <p className="mt-1 text-sm text-gray-400 italic">{t(lang, "free_time")}</p>
+                          </div>
+                        );
+                      }
+                      if (!placed) return null;
+
+                      const block = placed.block;
+                      const flags = placed.flags ?? [];
+                      if (w === "tarde" && block.periodo === "dia inteiro") return null;
+                      const isDiaInteiro = block.periodo === "dia inteiro";
+
+                      const antiFuradaEntry = antiFuradaMap[block.id];
+                      const logisticsEntry = logisticsMap[block.id];
+                      const safetyEntry = safetyMap[block.zona];
+                      const showSafety = !!safetyEntry && firstZoneIds.has(block.id);
+
+                      return (
+                        <div key={w} className="px-5 py-4">
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                              {isDiaInteiro ? `${t(lang, "morning")} + ${t(lang, "afternoon")}` : windowLabel}
+                            </span>
+                            <span className="text-xs px-1.5 py-0.5 rounded-full text-white font-medium" style={{ background: vibeColor(block.vibePrimary) }}>
+                              {block.vibePrimary}
+                            </span>
+                          </div>
+                          <h3 className="mt-1 font-bold text-base" style={{ color: "var(--color-night)" }}>{block.title}</h3>
+                          {block.content && (
+                            <p className="mt-1.5 text-sm text-gray-600 leading-relaxed">{block.content}</p>
+                          )}
+                          {flags.map((flag, fi) => <FlagBadge key={fi} flag={flag} lang={lang} />)}
+                          {block.extras && (
+                            <p className="mt-2 text-xs text-gray-500 whitespace-pre-line leading-relaxed">{block.extras}</p>
+                          )}
+                          {logisticsEntry && (
+                            <p className="mt-2 text-xs text-gray-600">
+                              {lang === "en" ? logisticsEntry.label.en : lang === "es" ? logisticsEntry.label.es : logisticsEntry.label.pt}
+                            </p>
+                          )}
+                          {antiFuradaEntry && (
+                            <div className="mt-3 rounded-xl p-3 print-block-furada space-y-1">
+                              <p className="text-xs font-semibold text-amber-700">⚠️ {t(lang, "anti_furada_label")}</p>
+                              <p className="text-sm text-gray-700">{antiFuradaEntry.trap}</p>
+                              {antiFuradaEntry.fairPrice && (
+                                <p className="text-xs font-medium" style={{ color: "var(--color-leaf)" }}>{antiFuradaEntry.fairPrice}</p>
+                              )}
+                            </div>
+                          )}
+                          {showSafety && (
+                            <div className="mt-2 rounded-xl p-3 print-block-safety space-y-1">
+                              <p className="text-xs font-semibold text-blue-700">🛡️ {safetyLabel} — {block.zona}</p>
+                              <p className="text-sm text-gray-700">
+                                {lang === "en" ? safetyEntry.en : lang === "es" ? safetyEntry.es : safetyEntry.pt}
+                              </p>
+                              {safetyEntry.nightNote && (
+                                <p className="text-xs text-gray-500 italic">{t(lang, "layer_night_note")} {safetyEntry.nightNote}</p>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Rio Now — always expanded in print */}
+          {(isPaid || profile.days === 1) && (
+            <div className="rounded-3xl bg-white p-5">
+              <p className="font-bold mb-3" style={{ color: "var(--color-night)" }}>
+                {t(lang, "layer_now_icon")} {t(lang, "layer_now")} ({rioMonthName})
+              </p>
+              <ul className="space-y-2">
+                {rioItems.map((item, i) => (
+                  <li key={i} className="text-sm text-gray-700">{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
 
         {/* Bottom CTA */}
         <div className="no-print flex flex-col sm:flex-row gap-3 pb-4">

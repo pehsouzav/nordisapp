@@ -20,8 +20,41 @@ body {
 
 h1, h2, h3 { line-height: 1.2; }
 
+/* Hidden on screen, only visible when printing */
+.print-only { display: none; }
+
 @media print {
   .no-print { display: none !important; }
-  .print-break { page-break-before: always; }
-  body { background: white !important; color: black !important; }
+  .print-only { display: block !important; }
+  body { background: white !important; }
+
+  /* Force backgrounds to print (colors, gradients) */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Brand-colored sections — explicit hex so inline CSS vars print reliably */
+  .print-hero {
+    background: #1a6b8a !important;
+    color: white !important;
+  }
+  .print-day-header {
+    background: #1a1f3c !important;
+    color: white !important;
+  }
+  .print-block-furada {
+    background: #fffbeb !important;
+    border: 1px solid #fde68a !important;
+  }
+  .print-block-safety {
+    background: #eff6ff !important;
+    border: 1px solid #bfdbfe !important;
+  }
+
+  /* Page break before each day (except the first) */
+  .print-page-break { page-break-before: always; break-before: page; }
+
+  /* Cleaner on paper */
+  * { box-shadow: none !important; }
 }
